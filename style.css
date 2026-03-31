@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "Syne";
+    src: url(./assets/fonts/Syne-VariableFont_wght.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    background-color: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    cursor: default;
+}
+
+body {
+    font-family: "Syne", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+}
+
+.logo {
+    width: 70px;
+}
+
+.burgermenu {
+    width: 40px;
+}
+
+.language__toogle {
+    display: flex;
+    gap: 6px;
+}
+
+.language__box {
+    padding: 3px 6px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.language__box.active {
+    border: 2px solid var(--color-highlight);
+    cursor: default;
+}
+
+.language__line {
+    width: 18px;
+}
+
+.language__line path {
+    stroke: transparent;
+}
+
+.language__box:hover .language__line path{
+    stroke: var(--color-text);
+}
+
+.language__box.active:hover .language__line path{
+    stroke: transparent;
+}
+
+.language__box:active{
+    border: 2px solid var(--color-text);
+}
+
+.language__box.active:active{
+    border: 2px solid var(--color-highlight);
+}
+
+.language__box:active .language__line path{
+    stroke: transparent;
+}

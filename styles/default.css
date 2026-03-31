@@ -1,0 +1,12 @@
+:root {
+    --color-bg: #FFFCF3;
+    --color-text: #000;
+    --color-highlight: #06BC8F;
+    --color-error: #E61D40;
+    --color-done: #70E71A;
+}
+
+.theme-dark {
+    --color-bg: #000;
+    --color-text: #FFFCF3;
+}
