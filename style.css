@@ -29,11 +29,20 @@ body {
     flex-direction: column;
 }
 
-header {
-    position: sticky;
+.navbar {
+    position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    padding: 24px 0;
+    background-color: var(--color-bg);
+    z-index: 1000;
+}
+
+.header__inner {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 30px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,4 +109,37 @@ nav {
 
 .language__box:active .language__line path{
     stroke: transparent;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hero__mail {
+    position: absolute;
+    left: 0;
+    top: 100vh;
+    transform: translateY(-100%) rotate(180deg);
+    writing-mode: vertical-rl;
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.hero__mail:hover {
+    color: var(--color-highlight);
+}
+
+.hero__headline {
+    font-size: 128px;
+    font-weight: 800;
+    text-align: center;
 }
