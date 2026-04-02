@@ -20,3 +20,9 @@
     --color-bg: #000;
     --color-text: #FFFCF3;
 }
+
+.default__text {
+    font-family: "Overpass", Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+}

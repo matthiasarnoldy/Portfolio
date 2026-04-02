@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matthias Arnoldy</title>
 
+    <link rel="shortcut icon" href="./assets/icons/initial.svg" type="image/x-icon">
+
     <link rel="stylesheet" href="./styles/default.css">
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <header class="navbar">
         <div class="header__inner">
@@ -16,14 +20,16 @@
                 <div class="language__toogle">
                     <div class="language__box active">
                         <span class="language">EN</span>
-                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1L19 0.999998" stroke-width="2" stroke-linecap="round"/>
+                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L19 0.999998" stroke-width="2" stroke-linecap="round" />
                         </svg>
                     </div>
                     <div class="language__box">
                         <span class="language">DE</span>
-                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1L19 0.999998" stroke-width="2" stroke-linecap="round"/>
+                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L19 0.999998" stroke-width="2" stroke-linecap="round" />
                         </svg>
                     </div>
                 </div>
@@ -33,19 +39,35 @@
     </header>
     <main>
         <section class="hero">
-            <h1 class="headline hero__headline">
-                Frontend Developer
-            </h1>
-            <a class="hero__mail" href="mailto:m.arnoldy@outlook.de">m.arnoldy@outlook.de</a>
-            <div class="subheader hero__subheader">
-                <svg class="hero__line" viewBox="0 0 20 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L19 0.999998" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            <div class="hero__content">
+                <h1 class="headline hero__headline">
+                    <span>Frontend</span>
+                    <span>Developer</span>
+                </h1>
+                <div class="subheader hero__subheader">
+                    <svg class="hero__line" viewBox="0 0 100 3" preserveAspectRatio="none" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M0 1.5H100" stroke="black" stroke-width="3" stroke-linecap="round"
+                            vector-effect="non-scaling-stroke" />
+                    </svg>
+                    <h3 class="subheadline hero__subheadline">
+                        Matthias Arnoldy
+                    </h3>
+                </div>
+            </div>
+            <a class="hero__mail default__text" href="mailto:m.arnoldy@outlook.de">m.arnoldy@outlook.de</a>
+            <div class="scrolldown hero__scrolldown">
+                <svg class="hero__arrow" viewBox="0 0 96 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23 135.105L48 160.105L73 135.105" stroke="black" stroke-width="4" />
+                    <path d="M48 68V160.105" stroke="black" stroke-width="4" />
                 </svg>
-                <h3 class="subheader hero__subheader">
-                    Matthias Arnoldy
-                </h3>
+                <p class="hero__arrow--text default__text">
+                    <span>Scroll</span>
+                    <span>Down</span>
+                </p>
             </div>
         </section>
     </main>
 </body>
+
 </html>
