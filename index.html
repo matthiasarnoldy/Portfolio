@@ -62,7 +62,8 @@
                     <path d="M23 135.105L48 160.105L73 135.105" stroke="black" stroke-width="4" />
                     <path d="M48 68V160.105" stroke="black" stroke-width="4" />
                 </svg>
-                <p class="hero__arrow--text background__color--default default__text default__text--22 default__text--300">
+                <p
+                    class="hero__arrow--text background__color--default default__text default__text--22 default__text--300">
                     <span>Scroll</span>
                     <span>Down</span>
                 </p>
@@ -116,45 +117,57 @@
         <section class="skills">
             <h2 class="skills__headline absolute background__color--default">My skills</h2>
             <div class="skills__wrapper">
-                <div class="skills__box">
-                    <img src="./assets/icons/angular.svg" alt="Angular">
-                    <p class="default__text default__text--16 default__text--700">Angular</p>
+                <div class="skills__presentation">
+                    <div class="skills__box">
+                        <img src="./assets/icons/angular.svg" alt="Angular">
+                        <p class="skills__box--text default__text default__text--16 default__text--700">Angular</p>
+                    </div>
+                    <div class="skills__box">
+                        <img src="./assets/icons/typescript.svg" alt="TypeScript">
+                        <p class="skills__box--text default__text default__text--16 default__text--700">TypeScript</p>
+                    </div>
+                    <div class="skills__box">
+                        <img src="./assets/icons/javascript.svg" alt="JavaScript">
+                        <p class="skills__box--text default__text default__text--16 default__text--700">JavaScript</p>
+                    </div>
+                    <div class="skills__box">
+                        <img src="./assets/icons/html.svg" alt="HTMl">
+                        <p class="skills__box--text default__text default__text--16 default__text--700">HTMl</p>
+                    </div>
+                    <div class="skills__box">
+                        <img src="./assets/icons/css.svg" alt="CSS">
+                        <p class="skills__box--text default__text default__text--16 default__text--700">CSS</p>
+                    </div>
+                    <div class="skills__box">
+                        <img src="./assets/icons/supabase.svg" alt="Supabase">
+                        <p class="skills__box--text default__text default__text--16 default__text--700">Supabase</p>
+                    </div>
+                    <div class="skills__box">
+                        <img src="./assets/icons/git.svg" alt="Git">
+                        <p class="skills__box--text default__text default__text--16 default__text--700">Git</p>
+                    </div>
+                    <div class="skills__box">
+                        <img src="./assets/icons/scrum.svg" alt="Scrum">
+                        <p class="skills__box--text default__text default__text--16 default__text--700">Scrum</p>
+                    </div>
+                    <div class="skills__box">
+                        <img src="./assets/icons/api.svg" alt="REST-API">
+                        <p class="skills__box--text default__text default__text--16 default__text--700">REST-API</p>
+                    </div>
+                    <div class="skills__box">
+                        <img src="./assets/icons/materialDesign.svg" alt="Material Design">
+                        <p class="skills__box--text default__text default__text--16 default__text--700">Material Design
+                        </p>
+                    </div>
                 </div>
-                <div class="skills__box">
-                    <img src="./assets/icons/typescript.svg" alt="TypeScript">
-                    <p class="default__text default__text--16 default__text--700">TypeScript</p>
-                </div>
-                <div class="skills__box">
-                    <img src="./assets/icons/javascript.svg" alt="JavaScript">
-                    <p class="default__text default__text--16 default__text--700">JavaScript</p>
-                </div>
-                <div class="skills__box">
-                    <img src="./assets/icons/html.svg" alt="HTMl">
-                    <p class="default__text default__text--16 default__text--700">HTMl</p>
-                </div>
-                <div class="skills__box">
-                    <img src="./assets/icons/css.svg" alt="CSS">
-                    <p class="default__text default__text--16 default__text--700">CSS</p>
-                </div>
-                <div class="skills__box">
-                    <img src="./assets/icons/supabase.svg" alt="Supabase">
-                    <p class="default__text default__text--16 default__text--700">Supabase</p>
-                </div>
-                <div class="skills__box">
-                    <img src="./assets/icons/git.svg" alt="Git">
-                    <p class="default__text default__text--16 default__text--700">Git</p>
-                </div>
-                <div class="skills__box">
-                    <img src="./assets/icons/scrum.svg" alt="Scrum">
-                    <p class="default__text default__text--16 default__text--700">Scrum</p>
-                </div>
-                <div class="skills__box">
-                    <img src="./assets/icons/api.svg" alt="REST-API">
-                    <p class="default__text default__text--16 default__text--700">REST-API</p>
-                </div>
-                <div class="skills__box">
-                    <img src="./assets/icons/materialDesign.svg" alt="Material Design">
-                    <p class="default__text default__text--16 default__text--700">Material Design</p>
+                <div class="skills__learning">
+                    <img class="skills__learning--icon" src="./assets/icons/continuedLearning.svg"
+                        alt="Continued Learning">
+                    <p class="default__text default__text--22 default__text--400">
+                        Don’t see the skill you need?
+                        <span class="skills__learning--button">Contact me</span>
+                        I’m always ready to learn!
+                    </p>
                 </div>
             </div>
         </section>
@@ -165,6 +178,14 @@
                 <path class="arrow__left--shaft" d="M193.521 41.3135L-23.687 258.521" stroke="black" stroke-width="4"
                     pathLength="100" />
             </svg>
+        </section>
+        <section class="portfolio">
+            <header class="portfolio__header">
+                <h2 class="portfolio__headline">Portfolio</h2>
+                <p class="default__text default__text--22 default__text--400">
+                    Explore a selection of my work here - Interact with projects to see my skills in action.
+                </p>
+            </header>
         </section>
         <section class="arrow arrow__right">
             <svg class="arrow__right--icon" width="235" height="235" viewBox="0 0 235 235" fill="none"
