@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header class="navbar">
+    <header class="navbar background__color--default">
         <div class="header__inner">
             <img class="logo" src="./assets/icons/initial.svg" alt="Initial Logo">
             <nav>
@@ -55,14 +55,14 @@
                     </h3>
                 </div>
             </div>
-            <a class="hero__mail default__text default__text--22 default__text--300"
+            <a class="hero__mail absolute default__text default__text--22 default__text--300"
                 href="mailto:m.arnoldy@outlook.de">m.arnoldy@outlook.de</a>
-            <div class="scrolldown hero__scrolldown">
+            <div class="scrolldown hero__scrolldown absolute">
                 <svg class="hero__arrow" viewBox="0 0 96 163" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M23 135.105L48 160.105L73 135.105" stroke="black" stroke-width="4" />
                     <path d="M48 68V160.105" stroke="black" stroke-width="4" />
                 </svg>
-                <p class="hero__arrow--text default__text default__text--22 default__text--300">
+                <p class="hero__arrow--text background__color--default default__text default__text--22 default__text--300">
                     <span>Scroll</span>
                     <span>Down</span>
                 </p>
@@ -105,10 +105,34 @@
                 </div>
             </div>
         </section>
-        <section class="arrow arrow--right">
-            <svg width="235" height="235" viewBox="0 0 235 235" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M41.3149 110.893V193.519H123.942" stroke="black" stroke-width="4" />
-                <path d="M193.521 41.3135L41.3135 193.521" stroke="black" stroke-width="4" />
+        <section class="arrow arrow__right">
+            <svg class="arrow__right--icon" width="235" height="235" viewBox="0 0 235 235" fill="none"
+                xmlns="http://www.w3.org/2000/svg" overflow="visible">
+                <path class="arrow__right--head" d="M41.3149 110.893V193.519H123.942" stroke="black" stroke-width="4" />
+                <path class="arrow__right--shaft" d="M193.521 41.3135L-23.687 258.521" stroke="black" stroke-width="4"
+                    pathLength="100" />
+            </svg>
+        </section>
+        <section class="skills">
+            <h2 class="skills__headline absolute background__color--default">My skills</h2>
+            <div class="skills__content">
+
+            </div>
+        </section>
+        <section class="arrow arrow__left">
+            <svg class="arrow__left--icon" width="235" height="235" viewBox="0 0 235 235" fill="none"
+                xmlns="http://www.w3.org/2000/svg" overflow="visible">
+                <path class="arrow__left--head" d="M41.3149 110.893V193.519H123.942" stroke="black" stroke-width="4" />
+                <path class="arrow__left--shaft" d="M193.521 41.3135L-23.687 258.521" stroke="black" stroke-width="4"
+                    pathLength="100" />
+            </svg>
+        </section>
+        <section class="arrow arrow__right">
+            <svg class="arrow__right--icon" width="235" height="235" viewBox="0 0 235 235" fill="none"
+                xmlns="http://www.w3.org/2000/svg" overflow="visible">
+                <path class="arrow__right--head" d="M41.3149 110.893V193.519H123.942" stroke="black" stroke-width="4" />
+                <path class="arrow__right--shaft" d="M193.521 41.3135L-23.687 258.521" stroke="black" stroke-width="4"
+                    pathLength="100" />
             </svg>
         </section>
     </main>

@@ -73,3 +73,11 @@ h2 {
 h2:hover {
     color: var(--color-highlight);
 }
+
+.background__color--default {
+    background-color: var(--color-bg);
+}
+
+.absolute {
+    position: absolute;
+}
