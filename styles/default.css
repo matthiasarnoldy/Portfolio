@@ -63,3 +63,13 @@ button:active {
 button:active span {
     color: var(--color-bg);
 }
+
+h2 {
+    font-family: "Syne", Arial, Helvetica, sans-serif;
+    font-size: 78px;
+    font-weight: 800;
+}
+
+h2:hover {
+    color: var(--color-highlight);
+}
