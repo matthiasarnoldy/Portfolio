@@ -335,12 +335,22 @@ main {
     padding: 10px;
 }
 
-.skills__content {
+.skills__wrapper {
     width: 100%;
-    height: 400px;
     margin: 57px 0 0;
     padding: 120px 100px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 78px 120px;
     border: 4px solid black;
+}
+
+.skills__box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
 @keyframes scrollArrow {
