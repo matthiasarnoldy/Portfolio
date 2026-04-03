@@ -23,6 +23,43 @@
 
 .default__text {
     font-family: "Overpass", Arial, Helvetica, sans-serif;
+}
+
+.default__text--22 {
     font-size: 22px;
+}
+
+.default__text--23 {
+    font-size: 23px;
+}
+
+.default__text--300 {
     font-weight: 300;
+}
+
+.default__text--400 {
+    font-weight: 400;
+}
+
+button {
+    padding: 20px 60px;
+    background-color: transparent;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+button:hover {
+    padding: 20px 80px;
+}
+
+button:hover span {
+    font-weight: 700;
+}
+
+button:active {
+    background-color: var(--color-text);
+}
+
+button:active span {
+    color: var(--color-bg);
 }
