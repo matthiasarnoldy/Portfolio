@@ -346,7 +346,7 @@ main {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 78px 84px;
+    gap: 78px 88px;
 }
 
 .skills__box {
@@ -388,7 +388,7 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 72px;
+    gap: 116px;
 }
 
 .portfolio__header {
@@ -420,7 +420,7 @@ main {
 .portfolio__presentation {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 72px;
 }
 
 .portfolio__wrapper {
@@ -441,6 +441,7 @@ main {
     position: relative;
     width: 50%;
     padding: 34px 0 0;
+    z-index: 10;
 }
 
 .portfolio__img--wrapLeft::after,
@@ -521,6 +522,48 @@ main {
     object-position: center;
 }
 
+.portfolio__details {
+    width: 40%;
+    padding: 34px 0 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 35px;
+    z-index: 0;
+    transition: transform 0.15s ease-out;
+}
+
+.portfolio__details--left {
+    transform: translateX(-140%);
+}
+
+.portfolio__details--right {
+    transform: translateX(140%);
+}
+
+.portfolio__wrapper:hover .portfolio__details--left,
+.portfolio__wrapper:hover .portfolio__details--right {
+    transform: translateX(0);
+}
+
+.portfolio__description {
+    padding: 100px 0 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.portfolio__description--text {
+    color: var(--color-highlight);
+}
+
+.portfolio__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .portfolio__number--left {
     font-family: "Syne", Arial, Helvetica, sans-serif;
     position: absolute;
@@ -533,115 +576,4 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-}
-
-@keyframes scrollArrow {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(100%);
-    }
-}
-
-@keyframes arrowRightHeadSlide {
-    0%   { transform: translate(0, 0); }
-    55%  { transform: translate(-65px, 65px); }
-    100% { transform: translate(-65px, 65px); }
-}
-
-@keyframes arrowRightShaftStretch {
-    0%   { stroke-dasharray: 70 30; }
-    55%  { 
-        stroke-dasharray: 100 0;
-        transform: translate(0, 0); 
-    }
-    100% { 
-        stroke-dasharray: 70 30; 
-        transform: translate(-65px, 65px);
-    }
-}
-
-@keyframes arrowLeftHeadSlide {
-    0%   { transform: translate(0, 0); }
-    55%  { transform: translate(-65px, 65px); }
-    100% { transform: translate(-65px, 65px); }
-}
-
-@keyframes arrowLeftShaftStretch {
-    0%   { stroke-dasharray: 70 30; }
-    55%  { 
-        stroke-dasharray: 100 0;
-        transform: translate(0, 0); 
-    }
-    100% { 
-        stroke-dasharray: 70 30; 
-        transform: translate(-65px, 65px);
-    }
-}
-
-@keyframes skillsLogoOrbit {
-    0% {
-        transform: translateX(0) scale(1);
-    }
-    5% {
-        transform: translateX(12px) scale(0.98);
-    }
-    10% {
-        transform: translateX(24px) scale(0.96);
-    }
-    15% {
-        transform: translateX(36px) scale(0.94);
-    }
-    20% {
-        transform: translateX(48px) scale(0.92);
-    }
-    25% {
-        transform: translateX(60px) scale(0.90);
-    }
-    30% {
-        transform: translateX(48px) scale(0.89);
-    }
-    35% {
-        transform: translateX(36px) scale(0.88);
-    }
-    40% {
-        transform: translateX(24px) scale(0.87);
-    }
-    45% {
-        transform: translateX(12px) scale(0.86);
-    }
-    50% {
-        transform: translateX(0px) scale(0.85);
-    }
-    55% {
-        transform: translateX(-12px) scale(0.86);
-    }
-    60% {
-        transform: translateX(-24px) scale(0.87);
-    }
-    65% {
-        transform: translateX(-36px) scale(0.88);
-    }
-    70% {
-        transform: translateX(-48px) scale(0.89);
-    }
-    75% {
-        transform: translateX(-60px) scale(0.9);
-    }
-    80% {
-        transform: translateX(-48px) scale(0.92);
-    }
-    85% {
-        transform: translateX(-36px) scale(0.94);
-    }
-    90% {
-        transform: translateX(-24px) scale(0.96);
-    }
-    95% {
-        transform: translateX(-12px) scale(0.98);
-    }
-    100% {
-        transform: translateX(0px) scale(1);
-    }
 }
