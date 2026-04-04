@@ -72,6 +72,11 @@ button:active span {
     color: var(--color-bg);
 }
 
+h1 {
+    font-size: 128px;
+    font-weight: 800;
+}
+
 h2 {
     font-family: "Syne", Arial, Helvetica, sans-serif;
     font-size: 78px;
@@ -80,6 +85,11 @@ h2 {
 
 h2:hover {
     color: var(--color-highlight);
+}
+
+h3 {
+    font-size: 48px;
+    font-weight: 700;
 }
 
 .background__color--default {
