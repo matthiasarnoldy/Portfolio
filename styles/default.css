@@ -29,6 +29,10 @@
     font-size: 16px;
 }
 
+.default__text--18 {
+    font-size: 18px;
+}
+
 .default__text--22 {
     font-size: 22px;
 }
@@ -54,6 +58,7 @@ button {
     background-color: transparent;
     color: var(--color-text);
     cursor: pointer;
+    transition: all 100ms ease-out;
 }
 
 button:hover {
@@ -81,6 +86,7 @@ h2 {
     font-family: "Syne", Arial, Helvetica, sans-serif;
     font-size: 78px;
     font-weight: 800;
+    transition: color 100ms ease-in-out;
 }
 
 h2:hover {
