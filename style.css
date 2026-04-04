@@ -9,6 +9,7 @@ html {
     background-color: var(--color-bg);
     display: flex;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 body {
@@ -648,4 +649,93 @@ main {
     align-items: center;
     flex-direction: column;
     gap: 8px;
+}
+
+.contact {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-top: -96px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color-bg);
+}
+
+.contact__panel-shell {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 12vw, 100% 100%, 0 100%);
+}
+
+.contact__panel {
+    min-height: 0;
+    background-color: var(--color-text);
+    clip-path: polygon(0 0, 100% 12vw, 100% 100%, 0 100%);
+}
+
+.contact__content {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 12vw 100px 0;
+    color: var(--color-bg);
+}
+
+.contact__headline {
+    width: fit-content;
+    padding-bottom: 58px;
+}
+
+.contact__formular-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact__formular--headline {
+    padding-bottom: 18px;
+    color: var(--color-highlight);
+}
+
+.contact__formular--greeting {
+    padding-bottom: 22px;
+}
+
+.contact__formular {
+    width: 100%;
+    max-width: 620px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.contact__input {
+    width: 100%;
+    padding: 15px 25px;
+    border: none;
+    border-bottom: 2px solid var(--color-bg);
+    background: transparent;
+    color: var(--color-bg);
+    outline: none;
+}
+
+.contact__input--textarea {
+    resize: none;
+    height: 120px;
+}
+
+.contact__input::placeholder {
+    color: var(--color-bg);
 }
