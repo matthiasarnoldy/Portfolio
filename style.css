@@ -687,6 +687,7 @@ main {
 }
 
 .contact__formular-container {
+    padding-bottom: 34px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -891,4 +892,61 @@ main {
 
 .contact__send:active span {
     color: var(--color-text);
+}
+
+footer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__initial {
+    width: 70px;
+}
+
+.footer__copyright {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer__quicklinks {
+    display: flex;
+    gap: 42px;
+}
+
+.footer__icon {
+    height: 40px;
+}
+
+.footer__arrow {
+    right: 0;
+    bottom: 119px;
+    color: var(--color-bg);
+    overflow: visible;
+    cursor: pointer;
+}
+
+.footer__arrow--head {
+    stroke-dasharray: 52 52;
+    stroke-dashoffset: 0;
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform 700ms ease-in-out;
+}
+
+.footer__arrow--shaft {
+    stroke-dasharray: 52 200;
+    stroke-dashoffset: 0;
+    transition: stroke-dasharray 700ms ease-in-out;
+}
+
+.footer__arrow:hover .footer__arrow--head {
+    transform: translateY(-24px);
+}
+
+.footer__arrow:hover .footer__arrow--shaft {
+    stroke-dasharray: 76 200;
 }

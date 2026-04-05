@@ -120,6 +120,10 @@ h5 {
     color: #E61C40;
 }
 
+.error__message--input {
+    padding-left: 4px;
+}
+
 .background__color--default {
     background-color: var(--color-bg);
 }

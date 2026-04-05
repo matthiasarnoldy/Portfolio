@@ -342,7 +342,7 @@
                                         <input class="contact__input default__text default__text--16 default__text--400" id="contactName" type="text" placeholder="Your name">
                                         <span class="contact__floating default__text default__text--16 default__text--400">Your name</span>
                                     </div>
-                                    <p class="error__message default__text default__text--16 default__text--400">
+                                    <p class="error__message error__message--input default__text default__text--16 default__text--400">
                                         Your name is required 
                                     </p>
                                 </div>
@@ -352,15 +352,20 @@
                                         <input class="contact__input default__text default__text--16 default__text--400" id="contactEmail" type="email" placeholder="Your email">
                                         <span class="contact__floating default__text default__text--16 default__text--400">Your email</span>
                                     </div>
-                                    <p class="error__message default__text default__text--16 default__text--400">
+                                    <p class="error__message error__message--input default__text default__text--16 default__text--400">
                                         Your email is required 
                                     </p>
                                 </div>
                                 <div class="contact__formular-wrapper">
-                                    <div class="contact__field">
-                                        <label class="sr-only" for="contact-message">Your message</label>
-                                        <textarea class="contact__input contact__input--textarea default__text default__text--18 default__text--300" id="contact-message" placeholder="Your message"></textarea>
-                                        <span class="contact__floating default__text default__text--18 default__text--300">Your message</span>
+                                    <div class="contact__input-wrapper">
+                                        <div class="contact__field">
+                                            <label class="sr-only" for="contact-message">Your message</label>
+                                            <textarea class="contact__input contact__input--textarea default__text default__text--18 default__text--300" id="contact-message" placeholder="Your message"></textarea>
+                                            <span class="contact__floating default__text default__text--18 default__text--300">Your message</span>
+                                        </div>
+                                        <p class="error__message error__message--input default__text default__text--16 default__text--400">
+                                            Your message is empty
+                                        </p>
                                     </div>
                                     <div class="contact__sendingprocess">
                                         <div class="contact__input-wrapper">
@@ -379,6 +384,21 @@
                                 </div>
                             </div>
                         </div>
+                        <footer>
+                            <div class="footer__copyright">
+                                <img class="footer__initial" src="./assets/icons/initial.svg" alt="Initial Logo">
+                                <p class="default__text default__text--22 default__text--400">&copy; Matthias Arnoldy 2026</p>
+                            </div>
+                            <div class="footer__quicklinks">
+                                <img class="footer__icon" src="./assets/icons/github.svg" alt="GitHub">
+                                <img class="footer__icon" src="./assets/icons/email.svg" alt="Email">
+                                <img class="footer__icon" src="./assets/icons/linkedIn.svg" alt="LinkedIn">
+                            </div>
+                            <svg class="footer__arrow absolute" width="39" height="55" viewBox="0 0 39 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="footer__arrow--head" d="M37.0898 16.6724L19.1636 2.54615L1.23742 16.6724" stroke="#FFFCF3" stroke-width="4"/>
+                                <path class="footer__arrow--shaft" d="M19.1641 54.5898L19.1641 -27.4541" stroke="#FFFCF3" stroke-width="4"/>
+                            </svg>
+                        </footer>
                     </div>
                 </div>
             </div>
