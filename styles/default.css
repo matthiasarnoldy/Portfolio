@@ -115,10 +115,18 @@ h5 {
     font-weight: 700;
 }
 
+.error__message {
+    color: #E61C40;
+}
+
 .background__color--default {
     background-color: var(--color-bg);
 }
 
 .absolute {
     position: absolute;
+}
+
+.d-none {
+    display: none;
 }

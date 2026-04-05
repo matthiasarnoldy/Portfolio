@@ -677,6 +677,7 @@ main {
     max-width: 1440px;
     margin: 0 auto;
     padding: 12vw 100px 0;
+    padding-bottom: 300px;
     color: var(--color-bg);
 }
 
@@ -707,6 +708,13 @@ main {
     align-items: center;
     flex-direction: column;
     gap: 20px;
+}
+
+.contact__input-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .sr-only {
@@ -746,7 +754,8 @@ main {
     box-shadow: none;
 }
 
-.contact__field:focus-within {
+.contact__field:focus-within,
+.contact__field:has(.contact__input:not(:placeholder-shown)) {
     outline: 2px solid var(--color-bg);
     box-shadow: none;
 }
@@ -779,7 +788,87 @@ main {
     opacity: 1;
 }
 
+.contact__formular-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .contact__input--textarea {
-    resize: none;
-    height: 120px;
+    resize: vertical;
+    height: 200px;
+    min-height: 100px;
+    max-height: 400px;
+}
+
+.contact__input--textarea::-webkit-resizer {
+    background: url("./assets/icons/resize.svg") no-repeat right bottom;
+    background-size: 13px 13px;
+    background-position: calc(100% - 7px) calc(100% - 4px);
+}
+
+.contact__privacy {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--color-bg);
+}
+
+.contact__privacy--checkbox {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: url("./assets/icons/checkboxDefault.svg") center/24px 24px no-repeat;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+}
+
+.contact__privacy--checkbox:hover,
+.contact__privacy:hover .contact__privacy--checkbox {
+    background-image: url("./assets/icons/checkboxDefaultHover.svg");
+    border-color: var(--color-highlight);
+}
+
+.contact__privacy--checkbox:checked {
+    background-image: url("./assets/icons/checkboxChecked.svg");
+    border-color: var(--color-highlight);
+}
+
+.contact__privacy--checkbox:checked:hover,
+.contact__privacy:hover .contact__privacy--checkbox:checked {
+    background-image: url("./assets/icons/checkboxCheckedHover.svg");
+}
+
+.contact__privacy--text {
+    margin-top: 4px;
+}
+
+.contact__privacy--link {
+    padding: 5px 7px;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    color: var(--color-highlight);
+    text-decoration: none;
+    transition: all 100ms ease-in-out;
+}
+
+.contact__privacy--link::after {
+    content: attr(data-text);
+    display: block;
+    font-weight: 700;
+    visibility: hidden;
+    white-space: nowrap;
+    height: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.contact__privacy--link:hover,
+.contact__privacy:hover .contact__privacy--link {
+    font-weight: 700;
 }
