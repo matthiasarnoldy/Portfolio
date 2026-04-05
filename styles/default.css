@@ -116,6 +116,10 @@ h5 {
     font-weight: 700;
 }
 
+a {
+    text-decoration: none;
+}
+
 .error__message {
     color: #E61C40;
 }

@@ -57,7 +57,7 @@
                 </div>
             </div>
             <a class="hero__mail absolute default__text default__text--22 default__text--300"
-                href="mailto:m.arnoldy@outlook.de">m.arnoldy@outlook.de</a>
+                href="#contact">m.arnoldy@outlook.de</a>
             <div class="scrolldown hero__scrolldown absolute">
                 <svg class="hero__arrow" viewBox="0 0 96 163" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M23 135.105L48 160.105L73 135.105" stroke="black" stroke-width="4" />
@@ -98,9 +98,11 @@
                                 to work remote</p>
                         </div>
                     </div>
-                    <button class="about__profile-button">
-                        <span class="default__text default__text--23 default__text--400">Let's talk</span>
-                    </button>
+                    <a class="about__profile-button--link" href="#contact">
+                        <button class="about__profile-button" type="button" onclick="location.href='#contact'">
+                            <span class="default__text default__text--23 default__text--400">Let's talk</span>
+                        </button>
+                    </a>
                 </div>
                 <div class="profile__img-wrap">
                     <img class="profile__img" src="./assets/img/matthias.png" alt="">
@@ -167,7 +169,7 @@
                     </div>
                     <p class="default__text default__text--22 default__text--400">
                         Don’t see the skill you need?
-                        <span class="skills__learning--button">Contact me</span>
+                        <a class="skills__learning--button" href="#contact" data-text="Contact me">Contact me</a>
                         I’m always ready to learn!
                     </p>
                 </div>
@@ -325,7 +327,7 @@
                     pathLength="100" />
             </svg>
         </section>
-        <section class="contact">
+        <section id="contact" class="contact">
             <div class="contact__panel-shell">
                 <div class="contact__panel">
                     <div class="contact__content">
@@ -390,15 +392,24 @@
                                 <p class="default__text default__text--22 default__text--400">&copy; Matthias Arnoldy 2026</p>
                             </div>
                             <div class="footer__quicklinks">
-                                <img class="footer__icon" src="./assets/icons/github.svg" alt="GitHub">
-                                <img class="footer__icon" src="./assets/icons/email.svg" alt="Email">
-                                <img class="footer__icon" src="./assets/icons/linkedIn.svg" alt="LinkedIn">
+                                <a class="footer__icon-wrap" href="https://github.com/matthiasarnoldy" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub">
+                                    <img class="footer__icon" src="./assets/icons/github.svg" alt="GitHub">
+                                </a>
+                                <a class="footer__icon-wrap" href="mailto:m.arnoldy@outlook.de" aria-label="Write an E-Mail">
+                                    <img class="footer__icon" src="./assets/icons/email.svg" alt="Email">
+                                </a>
+                                <a class="footer__icon-wrap" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn">
+                                    <img class="footer__icon" src="./assets/icons/linkedIn.svg" alt="LinkedIn">
+                                </a>
                             </div>
                             <svg class="footer__arrow absolute" width="39" height="55" viewBox="0 0 39 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path class="footer__arrow--head" d="M37.0898 16.6724L19.1636 2.54615L1.23742 16.6724" stroke="#FFFCF3" stroke-width="4"/>
                                 <path class="footer__arrow--shaft" d="M19.1641 54.5898L19.1641 -27.4541" stroke="#FFFCF3" stroke-width="4"/>
                             </svg>
                         </footer>
+                        <div class="footer__legalnotice">
+                            <p class="footer__legalnotice--text default__text default__text--16 default__text--400">Legal notice</p>
+                        </div>
                     </div>
                 </div>
             </div>

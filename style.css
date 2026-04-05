@@ -10,6 +10,7 @@ html {
     display: flex;
     justify-content: center;
     overflow-x: hidden;
+    cursor: default;
 }
 
 body {
@@ -170,10 +171,6 @@ main {
     text-decoration: none;
 }
 
-.hero__mail:hover {
-    color: var(--color-highlight);
-}
-
 .hero__scrolldown {
     bottom: 16px;
     right: 0;
@@ -237,6 +234,11 @@ main {
 
 .about__profile--infotext {
     margin-top: 6px;
+}
+
+.about__profile-button--link {
+    display: flex;
+    justify-content: center;
 }
 
 .about__profile-button {
@@ -389,8 +391,50 @@ main {
 
 .skills__learning--button {
     padding: 5px 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
     color: var(--color-highlight);
+    text-decoration: none;
     cursor: pointer;
+    transition: all 100ms ease-in-out;
+}
+
+.skills__learning--button::before {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    width: 50%;
+    height: 2px;
+    background-color: var(--color-highlight);
+    border-radius: 2px;
+    opacity: 0;
+    transform: translateX(-100%);
+    transform-origin: center;
+    transition: all 100ms ease-in;
+}
+
+.skills__learning--button:hover::before {
+    transform: translateX(-10px);
+    opacity: 1;
+}
+
+.skills__learning--button::after {
+    content: attr(data-text);
+    height: 0;
+    display: block;
+    font-weight: 700;
+    visibility: hidden;
+    white-space: nowrap;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.skills__learning--button:hover {
+    font-weight: 700;
 }
 
 .portfolio {
@@ -677,7 +721,7 @@ main {
     max-width: 1440px;
     margin: 0 auto;
     padding: 12vw 100px 0;
-    padding-bottom: 300px;
+    padding-bottom: 40px;
     color: var(--color-bg);
 }
 
@@ -917,8 +961,23 @@ footer {
     gap: 42px;
 }
 
+.footer__icon-wrap {
+    width: 40px;
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
 .footer__icon {
+    display: block;
+    width: 40px;
     height: 40px;
+    transition: transform 100ms ease-in-out;
+}
+
+.footer__icon-wrap:hover .footer__icon {
+    transform: translateY(-10px);
 }
 
 .footer__arrow {
@@ -934,13 +993,13 @@ footer {
     stroke-dashoffset: 0;
     transform-box: fill-box;
     transform-origin: center;
-    transition: transform 700ms ease-in-out;
+    transition: transform 500ms ease-in-out;
 }
 
 .footer__arrow--shaft {
     stroke-dasharray: 52 200;
     stroke-dashoffset: 0;
-    transition: stroke-dasharray 700ms ease-in-out;
+    transition: stroke-dasharray 500ms ease-in-out;
 }
 
 .footer__arrow:hover .footer__arrow--head {
@@ -949,4 +1008,15 @@ footer {
 
 .footer__arrow:hover .footer__arrow--shaft {
     stroke-dasharray: 76 200;
+}
+
+.footer__legalnotice {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    color: var(--color-bg);
+}
+
+.footer__legalnotice--text {
+    cursor: pointer;
 }
