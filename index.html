@@ -362,14 +362,19 @@
                                         <textarea class="contact__input contact__input--textarea default__text default__text--18 default__text--300" id="contact-message" placeholder="Your message"></textarea>
                                         <span class="contact__floating default__text default__text--18 default__text--300">Your message</span>
                                     </div>
-                                    <div class="contact__input-wrapper">
-                                        <div class="contact__privacy default__text default__text--16 default__text--400">
-                                            <input class="contact__privacy--checkbox" type="checkbox" id="contact-privacy">
-                                            <label class="contact__privacy--text" for="contact-privacy">I've read the <a class="contact__privacy--link" data-text="privacy policy" href="#">privacy policy</a> and agree to the processing of my data as outlined.</label>
+                                    <div class="contact__sendingprocess">
+                                        <div class="contact__input-wrapper">
+                                            <div class="contact__privacy default__text default__text--16 default__text--400">
+                                                <input class="contact__privacy--checkbox" type="checkbox" id="contact-privacy">
+                                                <label class="contact__privacy--text" for="contact-privacy">I've read the <a class="contact__privacy--link" data-text="privacy policy" href="#">privacy policy</a> and agree to the processing of my data as outlined.</label>
+                                            </div>
+                                            <p class="error__message default__text default__text--16 default__text--400">
+                                                Please accept the privacy policy.
+                                            </p>
                                         </div>
-                                        <p class="error__message default__text default__text--16 default__text--400">
-                                            Please accept the privacy policy.
-                                        </p>
+                                        <button class="contact__send disabled">
+                                            <span class="default__text default__text--23 default__text--400">Send message</span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>

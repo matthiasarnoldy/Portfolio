@@ -707,7 +707,7 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 8px;
 }
 
 .contact__input-wrapper {
@@ -809,6 +809,13 @@ main {
     background-position: calc(100% - 7px) calc(100% - 4px);
 }
 
+.contact__sendingprocess {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
 .contact__privacy {
     display: flex;
     align-items: center;
@@ -871,4 +878,17 @@ main {
 .contact__privacy--link:hover,
 .contact__privacy:hover .contact__privacy--link {
     font-weight: 700;
+}
+
+.contact__send {
+    border-color: #bbbbbb;
+    color: #bbbbbb;
+}
+
+.contact__send:active {
+    background-color: #bbbbbb;
+}
+
+.contact__send:active span {
+    color: var(--color-text);
 }
