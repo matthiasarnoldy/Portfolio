@@ -572,8 +572,14 @@ main {
     display: block;
     width: 100%;
     aspect-ratio: 31 / 20;
+    filter: grayscale(100%);
     object-fit: cover;
     object-position: center;
+    transition: all 300ms ease-in-out;
+}
+
+.portfolio__wrapper:hover .portfolio__img {
+    filter: grayscale(0);
 }
 
 .portfolio__details {
@@ -980,9 +986,12 @@ footer {
     transform: translateY(-10px);
 }
 
-.footer__arrow {
+.footer__arrow-link {
     right: 0;
     bottom: 119px;
+}
+
+.footer__arrow {
     color: var(--color-bg);
     overflow: visible;
     cursor: pointer;
@@ -1018,5 +1027,46 @@ footer {
 }
 
 .footer__legalnotice--text {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    color: var(--color-bg);
+    text-decoration: none;
     cursor: pointer;
+    transition: all 100ms ease-in-out;
+}
+
+.footer__legalnotice--text::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
+    height: 2px;
+    background-color: var(--color-highlight);
+    border-radius: 2px;
+    opacity: 0;
+    transform: translateX(-100%);
+    transform-origin: center;
+    transition: all 100ms ease-in;
+}
+
+.footer__legalnotice--text:hover::before {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.footer__legalnotice--text::after {
+    content: attr(data-text);
+    height: 0;
+    display: block;
+    font-weight: 700;
+    visibility: hidden;
+    white-space: nowrap;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.footer__legalnotice--text:hover {
+    font-weight: 700;
 }
