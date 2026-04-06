@@ -48,13 +48,13 @@
         transform: translateX(0) scale(1.00);
     }
     5% {
-        transform: translateX(12px) scale(0.98);
+        transform: translateX(12px) scaleX(0.45) rotate(-25deg);
     }
     10% {
         transform: translateX(24px) scale(0.96);
     }
     15% {
-        transform: translateX(36px) scale(0.94);
+        transform: translateX(12px) scaleX(0.45) rotate(-25deg);
     }
     20% {
         transform: translateX(48px) scale(0.92);
@@ -106,5 +106,98 @@
     }
     100% {
         transform: translateX(0px) scale(1.00);
+    }
+}
+
+@keyframes burgerTopIn {
+    0% {
+        transform: scaleX(1) rotate(0deg);
+    }
+    25% {
+        transform: scaleX(0.55) rotate(0deg);
+    }
+    50% {
+        transform: translateX(9px) translateY(0) scaleX(0.55) rotate(0deg);
+    }
+    75% {
+        transform: translateX(18px) translateY(-2px) scaleX(0.45) rotate(-25deg);
+    }
+    100% {
+        transform: translateX(9px) translateY(10px) scaleX(0.35) rotate(-15deg);
+    }
+}
+
+@keyframes burgerTopOut {
+    0% {
+        transform: translateX(9px) translateY(10px) scaleX(0.35) rotate(-15deg);
+    }
+    25% {
+        transform: translateX(18px) translateY(-2px) scaleX(0.45) rotate(-25deg);
+    }
+
+    50% {
+        transform: translateX(18px) translateY(-2px) scaleX(0.45) rotate(0deg);
+    }
+
+    75% {
+        transform: translateX(9px) translateY(0) scaleX(0.55) rotate(0deg);
+    }
+
+    100% {
+        transform: scaleX(1) rotate(0deg);
+    }
+}
+
+@keyframes burgerMiddleIn {
+    0% {
+        transform: scaleX(1) rotate(0deg);
+    }
+    100% {
+        transform: scaleX(1) rotate(35deg);
+    }
+}
+
+@keyframes burgerMiddleOut {
+    0% {
+        transform: scaleX(1) rotate(35deg);
+    }
+    100% {
+        transform: scaleX(1) rotate(0deg);
+    }
+}
+
+@keyframes burgerBottomIn {
+    0% {
+        transform: scaleX(1) rotate(0deg);
+    }
+    25% {
+        transform: scaleX(0.55) rotate(0deg);
+    }
+    50% {
+        transform: translateX(-9px) translateY(0) scaleX(0.55) rotate(0deg);
+    }
+    75% {
+        transform: translateX(-18px) translateY(2px) scaleX(0.45) rotate(-25deg);
+    }
+    100% {
+        transform: translateX(-9px) translateY(-10px) scaleX(0.35) rotate(-15deg);
+    }
+}
+
+@keyframes burgerBottomOut {
+    0% {
+        transform: translateX(-9px) translateY(-10px) scaleX(0.35) rotate(-15deg);
+    }
+    25% {
+        transform: translateX(-18px) translateY(2px) scaleX(0.45) rotate(-25deg);
+    }
+    50% {
+        transform: translateX(-18px) translateY(2px) scaleX(0.45) rotate(0deg);
+    }
+    75% {
+        transform: translateX(-9px) translateY(0) scaleX(0.55) rotate(0deg);
+    }
+    100% {
+        transform: scaleX(1) rotate(0deg);
     }
 }

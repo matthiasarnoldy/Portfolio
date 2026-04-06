@@ -74,7 +74,37 @@ nav {
 
 .burgermenu {
     width: 40px;
+    overflow: visible;
     cursor: pointer;
+}
+
+.burgermenu__line {
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.burgermenu__button .burgermenu__line--top {
+    animation: burgerTopOut 220ms ease-out both;
+}
+
+.burgermenu__button.is-open .burgermenu__line--top {
+    animation: burgerTopIn 220ms ease-out both;
+}
+
+.burgermenu__button .burgermenu__line--middle {
+    animation: burgerMiddleOut 220ms ease-out both;
+}
+
+.burgermenu__button.is-open .burgermenu__line--middle {
+    animation: burgerMiddleIn 220ms ease-out both;
+}
+
+.burgermenu__button .burgermenu__line--bottom {
+    animation: burgerBottomOut 220ms ease-out both;
+}
+
+.burgermenu__button.is-open .burgermenu__line--bottom {
+    animation: burgerBottomIn 220ms ease-out both;
 }
 
 .language__toogle {
