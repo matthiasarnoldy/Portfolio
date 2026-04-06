@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matthias Arnoldy</title>
 
-    <link rel="shortcut icon" href="./assets/icons/initial.svg" type="image/x-icon">
+    <link rel="icon" href="./assets/icons/initialDark.svg" media="(prefers-color-scheme: light)" type="image/svg+xml">
+    <link rel="icon" href="./assets/icons/initialLight.svg" media="(prefers-color-scheme: dark)" type="image/svg+xml">
 
     <link rel="stylesheet" href="./styles/animation.css">
     <link rel="stylesheet" href="./styles/default.css">
@@ -17,7 +18,7 @@
     <a href="#main-content" class="sr-only skip-link">Skip to main content</a>
     <header class="navbar background__color--default">
         <div class="header__inner">
-            <img class="logo" src="./assets/icons/initial.svg" alt="Initial Logo">
+            <img class="logo" src="./assets/icons/initialDark.svg" alt="Initial Logo">
             <nav>
                 <fieldset class="language__toogle" aria-label="Language">
                     <label class="language__box">
@@ -37,7 +38,9 @@
                         </svg>
                     </label>
                 </fieldset>
-                <img class="burgermenu" src="./assets/icons/burgerMenu.svg" alt="Burger Menu">
+                <button class="burgermenu__button" type="button" aria-label="Open menu">
+                    <img class="burgermenu" src="./assets/icons/burgerMenu.svg" alt="" aria-hidden="true">
+                </button>
             </nav>
         </div>
     </header>
@@ -266,7 +269,7 @@
             <div class="references__wrapper">
                 <div class="references__box">
                     <div class="references__box--quote">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Quote">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path class="references__box--iconpath" d="M10.0553 30L13.9444 23.2779C13.8516 23.2963 13.7497 23.3101 13.6386 23.3196C13.5275 23.3288 13.4257 23.3333 13.3332 23.3333C11.4998 23.3333 9.93039 22.6806 8.62484 21.375C7.31928 20.0694 6.6665 18.5 6.6665 16.6667C6.6665 14.8333 7.31928 13.2639 8.62484 11.9583C9.93039 10.6528 11.4998 10 13.3332 10C15.1665 10 16.7359 10.6528 18.0415 11.9583C19.3471 13.2639 19.9998 14.8333 19.9998 16.6667C19.9998 17.2686 19.9234 17.845 19.7707 18.3958C19.6179 18.9467 19.3887 19.4814 19.0832 20L13.3332 30H10.0553ZM25.0553 30L28.9444 23.2779C28.8516 23.2963 28.7497 23.3101 28.6386 23.3196C28.5275 23.3288 28.4257 23.3333 28.3332 23.3333C26.4998 23.3333 24.9304 22.6806 23.6248 21.375C22.3193 20.0694 21.6665 18.5 21.6665 16.6667C21.6665 14.8333 22.3193 13.2639 23.6248 11.9583C24.9304 10.6528 26.4998 10 28.3332 10C30.1665 10 31.7359 10.6528 33.0415 11.9583C34.3471 13.2639 34.9998 14.8333 34.9998 16.6667C34.9998 17.2686 34.9235 17.845 34.7707 18.3958C34.6179 18.9467 34.3887 19.4814 34.0832 20L28.3332 30H25.0553Z" fill="black"/>
                         </svg>
                         <div class="references__box--name">
@@ -284,7 +287,7 @@
                 </div>
                 <div class="references__box">
                     <div class="references__box--quote">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Quote">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path class="references__box--iconpath" d="M10.0553 30L13.9444 23.2779C13.8516 23.2963 13.7497 23.3101 13.6386 23.3196C13.5275 23.3288 13.4257 23.3333 13.3332 23.3333C11.4998 23.3333 9.93039 22.6806 8.62484 21.375C7.31928 20.0694 6.6665 18.5 6.6665 16.6667C6.6665 14.8333 7.31928 13.2639 8.62484 11.9583C9.93039 10.6528 11.4998 10 13.3332 10C15.1665 10 16.7359 10.6528 18.0415 11.9583C19.3471 13.2639 19.9998 14.8333 19.9998 16.6667C19.9998 17.2686 19.9234 17.845 19.7707 18.3958C19.6179 18.9467 19.3887 19.4814 19.0832 20L13.3332 30H10.0553ZM25.0553 30L28.9444 23.2779C28.8516 23.2963 28.7497 23.3101 28.6386 23.3196C28.5275 23.3288 28.4257 23.3333 28.3332 23.3333C26.4998 23.3333 24.9304 22.6806 23.6248 21.375C22.3193 20.0694 21.6665 18.5 21.6665 16.6667C21.6665 14.8333 22.3193 13.2639 23.6248 11.9583C24.9304 10.6528 26.4998 10 28.3332 10C30.1665 10 31.7359 10.6528 33.0415 11.9583C34.3471 13.2639 34.9998 14.8333 34.9998 16.6667C34.9998 17.2686 34.9235 17.845 34.7707 18.3958C34.6179 18.9467 34.3887 19.4814 34.0832 20L28.3332 30H25.0553Z" fill="black"/>
                         </svg>
                         <div class="references__box--name">
@@ -302,7 +305,7 @@
                 </div>
                 <div class="references__box">
                     <div class="references__box--quote">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Quote">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path class="references__box--iconpath" d="M10.0553 30L13.9444 23.2779C13.8516 23.2963 13.7497 23.3101 13.6386 23.3196C13.5275 23.3288 13.4257 23.3333 13.3332 23.3333C11.4998 23.3333 9.93039 22.6806 8.62484 21.375C7.31928 20.0694 6.6665 18.5 6.6665 16.6667C6.6665 14.8333 7.31928 13.2639 8.62484 11.9583C9.93039 10.6528 11.4998 10 13.3332 10C15.1665 10 16.7359 10.6528 18.0415 11.9583C19.3471 13.2639 19.9998 14.8333 19.9998 16.6667C19.9998 17.2686 19.9234 17.845 19.7707 18.3958C19.6179 18.9467 19.3887 19.4814 19.0832 20L13.3332 30H10.0553ZM25.0553 30L28.9444 23.2779C28.8516 23.2963 28.7497 23.3101 28.6386 23.3196C28.5275 23.3288 28.4257 23.3333 28.3332 23.3333C26.4998 23.3333 24.9304 22.6806 23.6248 21.375C22.3193 20.0694 21.6665 18.5 21.6665 16.6667C21.6665 14.8333 22.3193 13.2639 23.6248 11.9583C24.9304 10.6528 26.4998 10 28.3332 10C30.1665 10 31.7359 10.6528 33.0415 11.9583C34.3471 13.2639 34.9998 14.8333 34.9998 16.6667C34.9998 17.2686 34.9235 17.845 34.7707 18.3958C34.6179 18.9467 34.3887 19.4814 34.0832 20L28.3332 30H25.0553Z" fill="black"/>
                         </svg>
                         <div class="references__box--name">
@@ -389,7 +392,7 @@
                         </div>
                         <footer>
                             <div class="footer__copyright">
-                                <img class="footer__initial" src="./assets/icons/initial.svg" alt="Initial Logo">
+                                <img class="footer__initial" src="./assets/icons/initialLight.svg" alt="Initial Logo">
                                 <p class="default__text default__text--22 default__text--400">&copy; Matthias Arnoldy 2026</p>
                             </div>
                             <div class="footer__quicklinks">

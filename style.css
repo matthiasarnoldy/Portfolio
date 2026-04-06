@@ -55,6 +55,23 @@ nav {
     width: 70px;
 }
 
+.burgermenu__button {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.burgermenu__button:hover {
+    padding: 0;
+}
+
+.burgermenu__button:active {
+    padding: 0;
+    background-color: transparent;
+}
+
 .burgermenu {
     width: 40px;
     cursor: pointer;
