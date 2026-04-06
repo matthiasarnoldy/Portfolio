@@ -90,6 +90,11 @@ button:active span,
     color: var(--color-bg);
 }
 
+button:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
 h1 {
     font-size: 128px;
     font-weight: 800;
@@ -128,6 +133,17 @@ a {
     text-decoration: none;
 }
 
+a:focus-visible,
+button:focus-visible,
+.button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+    outline: 3px solid var(--color-highlight);
+    outline-offset: 4px;
+}
+
 .error__message {
     color: #E61C40;
 }
@@ -146,9 +162,4 @@ a {
 
 .d-none {
     display: none;
-}
-
-.disabled {
-    opacity: 0.5;
-    pointer-events: none;
 }

@@ -817,6 +817,7 @@ main {
 .contact__input {
     width: 100%;
     padding: 15px 25px;
+    display: block;
     border: none;
     background: transparent;
     color: var(--color-bg);
@@ -881,7 +882,7 @@ main {
 .contact__input--textarea::-webkit-resizer {
     background: url("./assets/icons/resize.svg") no-repeat right bottom;
     background-size: 13px 13px;
-    background-position: calc(100% - 7px) calc(100% - 4px);
+    background-position: calc(100% - 7px) calc(100% - 7px);
 }
 
 .contact__sendingprocess {

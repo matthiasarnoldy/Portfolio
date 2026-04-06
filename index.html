@@ -60,7 +60,7 @@
             <a class="hero__mail absolute default__text default__text--22 default__text--300"
                 href="#contact">m.arnoldy@outlook.de</a>
             <div class="scrolldown hero__scrolldown absolute">
-                <svg class="hero__arrow" viewBox="0 0 96 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="hero__arrow" viewBox="0 0 96 163" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M23 135.105L48 160.105L73 135.105" stroke="black" stroke-width="4" />
                     <path d="M48 68V160.105" stroke="black" stroke-width="4" />
                 </svg>
@@ -108,14 +108,14 @@
                 </div>
             </div>
         </section>
-        <section class="arrow arrow__right">
+        <div class="arrow arrow__right" aria-hidden="true">
             <svg class="arrow__right--icon" width="235" height="235" viewBox="0 0 235 235" fill="none"
-                xmlns="http://www.w3.org/2000/svg" overflow="visible">
+                xmlns="http://www.w3.org/2000/svg" overflow="visible" aria-hidden="true">
                 <path class="arrow__right--head" d="M41.3149 110.893V193.519H123.942" stroke="black" stroke-width="4" />
                 <path class="arrow__right--shaft" d="M193.521 41.3135L-23.687 258.521" stroke="black" stroke-width="4"
                     pathLength="100" />
             </svg>
-        </section>
+        </div>
         <section class="skills">
             <h2 class="skills__headline absolute background__color--default">My skills</h2>
             <div class="skills__wrapper">
@@ -174,14 +174,14 @@
                 </div>
             </div>
         </section>
-        <section class="arrow arrow__left">
+        <div class="arrow arrow__left" aria-hidden="true">
             <svg class="arrow__left--icon" width="235" height="235" viewBox="0 0 235 235" fill="none"
-                xmlns="http://www.w3.org/2000/svg" overflow="visible">
+                xmlns="http://www.w3.org/2000/svg" overflow="visible" aria-hidden="true">
                 <path class="arrow__left--head" d="M41.3149 110.893V193.519H123.942" stroke="black" stroke-width="4" />
                 <path class="arrow__left--shaft" d="M193.521 41.3135L-23.687 258.521" stroke="black" stroke-width="4"
                     pathLength="100" />
             </svg>
-        </section>
+        </div>
         <section class="portfolio">
             <header class="portfolio__header">
                 <h2 class="portfolio__headline">Portfolio</h2>
@@ -318,14 +318,14 @@
                 </div>
             </div>
         </section>
-        <section class="arrow arrow__right">
+        <div class="arrow arrow__right" aria-hidden="true">
             <svg class="arrow__right--icon" width="235" height="235" viewBox="0 0 235 235" fill="none"
-                xmlns="http://www.w3.org/2000/svg" overflow="visible">
+                xmlns="http://www.w3.org/2000/svg" overflow="visible" aria-hidden="true">
                 <path class="arrow__right--head" d="M41.3149 110.893V193.519H123.942" stroke="black" stroke-width="4" />
                 <path class="arrow__right--shaft" d="M193.521 41.3135L-23.687 258.521" stroke="black" stroke-width="4"
                     pathLength="100" />
             </svg>
-        </section>
+        </div>
         <section id="contact" class="contact">
             <div class="contact__panel-shell">
                 <div class="contact__panel">
@@ -340,20 +340,20 @@
                                 <div class="contact__input-wrapper">
                                     <div class="contact__field">
                                         <label class="sr-only" for="contactName">Your name</label>
-                                        <input class="contact__input default__text default__text--16 default__text--400" id="contactName" type="text" placeholder="Your name">
+                                        <input class="contact__input default__text default__text--16 default__text--400" id="contactName" type="text" placeholder="Your name" aria-describedby="contactNameError" aria-invalid="false">
                                         <span class="contact__floating default__text default__text--16 default__text--400">Your name</span>
                                     </div>
-                                    <p class="error__message error__message--input default__text default__text--16 default__text--400">
+                                    <p id="contactNameError" class="error__message error__message--input default__text default__text--16 default__text--400" role="alert" aria-live="polite">
                                         Your name is required 
                                     </p>
                                 </div>
                                 <div class="contact__input-wrapper">
                                     <div class="contact__field">
                                         <label class="sr-only" for="contactEmail">Your email</label>
-                                        <input class="contact__input default__text default__text--16 default__text--400" id="contactEmail" type="email" placeholder="Your email">
+                                        <input class="contact__input default__text default__text--16 default__text--400" id="contactEmail" type="email" placeholder="Your email" aria-describedby="contactEmailError" aria-invalid="false">
                                         <span class="contact__floating default__text default__text--16 default__text--400">Your email</span>
                                     </div>
-                                    <p class="error__message error__message--input default__text default__text--16 default__text--400">
+                                    <p id="contactEmailError" class="error__message error__message--input default__text default__text--16 default__text--400" role="alert" aria-live="polite">
                                         Your email is required 
                                     </p>
                                 </div>
@@ -361,24 +361,24 @@
                                     <div class="contact__input-wrapper">
                                         <div class="contact__field">
                                             <label class="sr-only" for="contact-message">Your message</label>
-                                            <textarea class="contact__input contact__input--textarea default__text default__text--18 default__text--300" id="contact-message" placeholder="Your message"></textarea>
+                                            <textarea class="contact__input contact__input--textarea default__text default__text--18 default__text--300" id="contact-message" placeholder="Your message" aria-describedby="contactMessageError" aria-invalid="false"></textarea>
                                             <span class="contact__floating default__text default__text--18 default__text--300">Your message</span>
                                         </div>
-                                        <p class="error__message error__message--input default__text default__text--16 default__text--400">
+                                        <p id="contactMessageError" class="error__message error__message--input default__text default__text--16 default__text--400" role="alert" aria-live="polite">
                                             Your message is empty
                                         </p>
                                     </div>
                                     <div class="contact__sendingprocess">
                                         <div class="contact__input-wrapper">
                                             <div class="contact__privacy default__text default__text--16 default__text--400">
-                                                <input class="contact__privacy--checkbox" type="checkbox" id="contact-privacy">
+                                                <input class="contact__privacy--checkbox" type="checkbox" id="contact-privacy" aria-describedby="contactPrivacyError" aria-invalid="false">
                                                 <label class="contact__privacy--text" for="contact-privacy">I've read the <a class="contact__privacy--link" data-text="privacy policy" href="#">privacy policy</a> and agree to the processing of my data as outlined.</label>
                                             </div>
-                                            <p class="error__message default__text default__text--16 default__text--400">
+                                            <p id="contactPrivacyError" class="error__message default__text default__text--16 default__text--400" role="alert" aria-live="polite">
                                                 Please accept the privacy policy.
                                             </p>
                                         </div>
-                                        <button class="contact__send disabled">
+                                        <button disabled class="contact__send">
                                             <span class="default__text default__text--23 default__text--400">Send message</span>
                                         </button>
                                     </div>
@@ -402,7 +402,7 @@
                                 </a>
                             </div>
                             <a href="#page-top" class="footer__arrow-link absolute" aria-label="Back to top">
-                                <svg class="footer__arrow" width="39" height="55" viewBox="0 0 39 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="footer__arrow" width="39" height="55" viewBox="0 0 39 55" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path class="footer__arrow--head" d="M37.0898 16.6724L19.1636 2.54615L1.23742 16.6724" stroke="#FFFCF3" stroke-width="4"/>
                                     <path class="footer__arrow--shaft" d="M19.1641 54.5898L19.1641 -27.4541" stroke="#FFFCF3" stroke-width="4"/>
                                 </svg>
