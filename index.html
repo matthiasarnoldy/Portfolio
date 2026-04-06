@@ -19,22 +19,24 @@
         <div class="header__inner">
             <img class="logo" src="./assets/icons/initial.svg" alt="Initial Logo">
             <nav>
-                <div class="language__toogle">
-                    <div class="language__box active">
+                <fieldset class="language__toogle" aria-label="Language">
+                    <label class="language__box">
+                        <input class="language__radio sr-only" type="radio" name="language" value="en" checked>
                         <span class="language">EN</span>
                         <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L19 0.999998" stroke-width="2" stroke-linecap="round" />
                         </svg>
-                    </div>
-                    <div class="language__box">
+                    </label>
+                    <label class="language__box">
+                        <input class="language__radio sr-only" type="radio" name="language" value="de">
                         <span class="language">DE</span>
                         <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L19 0.999998" stroke-width="2" stroke-linecap="round" />
                         </svg>
-                    </div>
-                </div>
+                    </label>
+                </fieldset>
                 <img class="burgermenu" src="./assets/icons/burgerMenu.svg" alt="Burger Menu">
             </nav>
         </div>
