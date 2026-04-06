@@ -546,25 +546,30 @@ main {
     transform: translate(-50%, -50%) rotate(0deg);
 }
 
-.portfolio__wrapper:hover .portfolio__img--wrapLeft::after {
+.portfolio__wrapper:hover .portfolio__img--wrapLeft::after,
+.portfolio__wrapper:focus-within .portfolio__img--wrapLeft::after {
     opacity: 1;
 }
 
-.portfolio__wrapper:hover .portfolio__img--wrapRight::after {
+.portfolio__wrapper:hover .portfolio__img--wrapRight::after,
+.portfolio__wrapper:focus-within .portfolio__img--wrapRight::after {
     opacity: 1;
 }
 
-.portfolio__wrapper:hover .portfolio__img--wrapLeft::before {
+.portfolio__wrapper:hover .portfolio__img--wrapLeft::before,
+.portfolio__wrapper:focus-within .portfolio__img--wrapLeft::before {
     opacity: 1;
     transform: translate(50%, -50%) rotate(-135deg) scale(2);
 }
 
-.portfolio__wrapper:hover .portfolio__img--wrapRight::before {
+.portfolio__wrapper:hover .portfolio__img--wrapRight::before,
+.portfolio__wrapper:focus-within .portfolio__img--wrapRight::before {
     opacity: 1;
     transform: translate(-50%, -50%) rotate(135deg) scale(2);
 }
 
-.portfolio__wrapper:hover .portfolio__img--wrap {
+.portfolio__wrapper:hover .portfolio__img--wrap,
+.portfolio__wrapper:focus-within .portfolio__img--wrap {
     opacity: 1;
 }
 
@@ -578,7 +583,8 @@ main {
     transition: all 300ms ease-in-out;
 }
 
-.portfolio__wrapper:hover .portfolio__img {
+.portfolio__wrapper:hover .portfolio__img,
+.portfolio__wrapper:focus-within .portfolio__img {
     filter: grayscale(0);
 }
 
@@ -602,7 +608,9 @@ main {
 }
 
 .portfolio__wrapper:hover .portfolio__details--left,
-.portfolio__wrapper:hover .portfolio__details--right {
+.portfolio__wrapper:hover .portfolio__details--right,
+.portfolio__wrapper:focus-within .portfolio__details--left,
+.portfolio__wrapper:focus-within .portfolio__details--right {
     transform: translateX(0);
 }
 
