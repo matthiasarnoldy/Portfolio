@@ -2,16 +2,24 @@
     main {
         padding: 148px 100px 102px;
     }
+
+    .legal__back-link {
+        right: 100px;
+    }
 }
 
 @media (max-width: 800px) {
-    h2.text__wrapper--headline {
+    .text__wrapper--headline {
         font-size: 23px;
         font-weight: 700;
     }
 
     main {
         padding: 148px 48px 102px;
+    }
+
+    .legal__back-link {
+        right: 48px;
     }
 
     .footer__content {
@@ -21,8 +29,12 @@
 
 @media (max-width: 620px) {
     main {
-        padding: 116px 25px 102px;
+        padding: 148px 25px 102px;
         gap: 32px;
+    }
+
+    .legal__back-link {
+        right: 25px;
     }
 
     .footer__panel-shell {
