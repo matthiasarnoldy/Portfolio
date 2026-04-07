@@ -532,6 +532,7 @@ main {
 }
 
 .portfolio__presentation {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 72px;
@@ -555,6 +556,7 @@ main {
     position: relative;
     width: 50%;
     padding: 34px 0 0;
+    background-color: var(--color-bg);
     z-index: 10;
 }
 
@@ -565,7 +567,6 @@ main {
     top: 54px;
     width: 100%;
     aspect-ratio: 31 / 20;
-    /* height: calc(100% - 34px); */
     border: 4px solid var(--color-text);
     opacity: 0;
     pointer-events: none;
@@ -585,7 +586,7 @@ main {
 .portfolio__img--wrapRight::before {
     content: "";
     position: absolute;
-    top: calc(18px + 100% / 2);
+    top: calc(12px + 100% / 2);
     width: 48px;
     height: 48px;
     background-image: url('./assets/icons/arrowDownDarkBg.svg');
@@ -621,13 +622,13 @@ main {
 .portfolio__wrapper:hover .portfolio__img--wrapLeft::before,
 .portfolio__wrapper:focus-within .portfolio__img--wrapLeft::before {
     opacity: 1;
-    transform: translate(50%, -50%) rotate(-135deg) scale(2);
+    transform: translate(50%, -50%) rotate(-135deg) scale(1.56);
 }
 
 .portfolio__wrapper:hover .portfolio__img--wrapRight::before,
 .portfolio__wrapper:focus-within .portfolio__img--wrapRight::before {
     opacity: 1;
-    transform: translate(-50%, -50%) rotate(135deg) scale(2);
+    transform: translate(-50%, -50%) rotate(135deg) scale(1.56);
 }
 
 .portfolio__wrapper:hover .portfolio__img--wrap,
@@ -659,6 +660,10 @@ main {
     gap: 35px;
     z-index: 0;
     transition: transform 0.15s ease-out;
+}
+
+.portfolio__wrapper:nth-child(even) .portfolio__description {
+    text-align: right;
 }
 
 .portfolio__details--left {
@@ -699,6 +704,7 @@ main {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 100;
 }
 
 .portfolio__number--right {
@@ -706,6 +712,7 @@ main {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 100;
 }
 
 .references {
@@ -730,7 +737,6 @@ main {
     width: 100%;
     display: flex;
     justify-content: center;
-    /* flex-wrap: wrap; */
     gap: 24px;
 }
 
@@ -1055,6 +1061,11 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+.footer__mail {
+    color: var(--color-bg);
+    display: none;
 }
 
 .footer__quicklinks {
