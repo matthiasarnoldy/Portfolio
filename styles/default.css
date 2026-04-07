@@ -37,6 +37,10 @@
     font-size: 22px;
 }
 
+.default__text--22constante {
+    font-size: 22px;
+}
+
 .default__text--23 {
     font-size: 23px;
 }
@@ -87,6 +91,7 @@ button:active,
 
 button:active span,
 .button:active span {
+    font-weight: 400;
     color: var(--color-bg);
 }
 
@@ -96,13 +101,13 @@ button:disabled {
 }
 
 h1 {
-    font-size: 128px;
+    font-size: clamp(36px, 8.21vw + 9.71px, 128px);
     font-weight: 800;
 }
 
 h2 {
     font-family: "Syne", Arial, Helvetica, sans-serif;
-    font-size: 78px;
+    font-size: clamp(36px, 4.07vw + 19.28px, 78px);
     font-weight: 800;
     transition: color 100ms ease-in-out;
 }
@@ -112,7 +117,8 @@ h2:hover {
 }
 
 h3 {
-    font-size: 48px;
+    /* font-size: 48px; */
+    font-size: clamp(23px, 2.38vw + 13.72px, 48px);
     font-weight: 700;
 }
 

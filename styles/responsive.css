@@ -1,0 +1,164 @@
+@media (max-width: 1080px) {
+    .skills__wrapper {
+        padding: 80px 24px;
+    }
+
+    .skills__presentation {
+        gap: 56px;
+    }
+}
+
+@media (max-width: 920px) {
+    .about {
+        gap: 32px;
+    }
+
+    .about__profile {
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .profile__text {
+        width: 100%;
+        padding-bottom: 32px;
+        gap: 32px;
+    }
+
+    .profile__img-wrap {
+        width: 500px;
+    }
+
+    .skills__learning {
+        align-items: center;
+    }
+
+    .skills__learning--button {
+        padding: 0;
+    }
+
+    .skills__learning--button:hover::before {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 800px) {
+    .default__text--22 {
+        font-size: 20px;
+    }
+
+    button,
+    .button {
+        padding: 20px 40px;
+    }
+
+    button:hover,
+    .button:hover {
+        padding: 20px 60px;
+    }
+
+    .header__inner {
+        padding: 30px 48px;
+    }
+
+    .language__toogle {
+        display: none;
+    }
+
+    .hero__subheader {
+        gap: 8px;
+    }
+
+    .hero__scrolldown {
+        right: -25px;
+    }
+
+    main {
+        padding: 0 48px;
+    }
+
+    .about {
+        padding: 32px 0 0;
+    }
+
+    .about__profile--icon {
+        height: 32px;
+    }
+
+    .arrow {
+        height: 250px;
+    }
+
+    .arrow__right--icon {
+        height: 167px;
+    }
+
+    .arrow__left--icon {
+        height: 167px;
+    }
+
+    .skills__box {
+        width: 85px;
+    }
+
+    .skills__box img {
+        height: 60px;
+    }
+
+    .contact__content {
+        padding: 12vw 48px 40px;
+    }
+}
+
+@media (max-width: 620px) {
+    .header__inner {
+        padding: 30px 25px;
+    }
+
+    main {
+        padding: 0 25px;
+    }
+
+    .about__headline {
+        text-align: center;
+    }
+
+    .profile__img-wrap {
+        width: 100%;
+    }
+
+    .profile__img-wrap::after {
+        top: 14px;
+        left: 14px;
+    }
+
+    .contact__content {
+        padding: 12vw 25px 40px;
+    }
+}
+
+@media (max-width: 520px) {
+    .hero__subheadline {
+        margin-top: 4px;
+    }
+
+    .skills__presentation {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 390px) {
+    h2 {
+        font-size: 32px;
+    }
+
+    .skills__wrapper {
+        padding: 48px 8px;
+    }
+
+    .skills__learning {
+        align-items: center;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+}
