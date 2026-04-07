@@ -1,0 +1,39 @@
+@media (max-width: 1080px) {
+    main {
+        padding: 148px 100px 102px;
+    }
+}
+
+@media (max-width: 800px) {
+    h2.text__wrapper--headline {
+        font-size: 23px;
+        font-weight: 700;
+    }
+
+    main {
+        padding: 148px 48px 102px;
+    }
+
+    .footer__content {
+        padding: 8vw 48px 40px;
+    }
+}
+
+@media (max-width: 620px) {
+    main {
+        padding: 116px 25px 102px;
+        gap: 32px;
+    }
+
+    .footer__panel-shell {
+        clip-path: polygon(0 0, 100% 6vw, 100% 100%, 0 100%);
+    }
+
+    .footer__panel {
+        clip-path: polygon(0 0, 100% 6vw, 100% 100%, 0 100%);
+    }
+
+    .contact__content {
+        padding: 20vw 25px 40px;
+    }
+}

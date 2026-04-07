@@ -1,0 +1,62 @@
+h1 {
+    font-size: clamp(32px, 4.11vw + 18.86px, 78px);
+}
+
+h2.text__wrapper--headline {
+    font-family: "Overpass", Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+main {
+    padding: 148px 204px 102px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.legal__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.gap-16 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer {
+    width: 100%;
+    align-self: stretch;
+    margin-inline: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color-bg);
+}
+
+.footer__panel-shell {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 3vw, 100% 100%, 0 100%);
+}
+
+.footer__panel {
+    min-height: 0;
+    background-color: var(--color-text);
+    clip-path: polygon(0 0, 100% 3vw, 100% 100%, 0 100%);
+}
+
+.footer__content {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 8vw 100px 40px;
+    color: var(--color-bg);
+}
