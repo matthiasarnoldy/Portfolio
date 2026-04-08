@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
+    <title data-i18n="privacy.meta.title">Privacy Policy</title>
 
     <link rel="icon" href="../assets/icons/initialDark.svg" media="(prefers-color-scheme: light)" type="image/svg+xml">
     <link rel="icon" href="../assets/icons/initialLight.svg" media="(prefers-color-scheme: dark)" type="image/svg+xml">
+
+    <script src="../scripts/translations.js" defer></script>
+    <script src="../scripts/script.js" defer></script>
 
     <link rel="stylesheet" href="../styles/animation.css">
     <link rel="stylesheet" href="../styles/default.css">
@@ -17,12 +20,12 @@
     <link rel="stylesheet" href="../styles/legalInformation/responsive.css">
 </head>
 
-<body>
-    <a href="#main-content" class="sr-only skip-link">Skip to main content</a>
+<body onload="init()">
+    <a href="#main-content" class="sr-only skip-link" data-i18n="a11y.skipToMain">Skip to main content</a>
     <header class="navbar background__color--default">
         <div class="header__inner">
-            <img class="logo" src="../assets/icons/initialDark.svg" alt="Initial Logo">
-            <button class="burgermenu__button" type="button" aria-label="Open menu">
+            <img class="logo" src="../assets/icons/initialDark.svg" alt="Initial Logo" data-i18n-alt="header.logoAlt">
+            <button class="burgermenu__button" type="button" aria-label="Open menu" data-i18n-aria-label="header.openMenu">
                 <svg class="burgermenu" width="44" height="38" viewBox="0 0 44 38" fill="none"
                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path class="burgermenu__line burgermenu__line--top" d="M2 2H42" stroke="black" stroke-width="4"
@@ -35,19 +38,19 @@
             </button>
         </div>
     </header>
-    <a class="legal__back-link" href="../index.html" aria-label="Back to homepage">
+    <a class="legal__back-link" href="../index.html" aria-label="Back to homepage" data-i18n-aria-label="privacy.backToHomepage">
         <svg class="legal__icon" width="55" height="39" viewBox="0 0 55 39" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16.6729 1.23828L2.54664 19.1645L16.6728 37.0907" stroke="black" stroke-width="4" />
             <path d="M54.5898 19.1641L2.5459 19.1641" stroke="black" stroke-width="4" />
         </svg>
     </a>
     <main id="main-content" tabindex="-1">
-        <h1>Privacy Policy</h1>
+        <h1 data-i18n="privacy.title">Privacy Policy</h1>
         <section class="gap-16">
-            <h2>1. Data protection at a glance</h2>
+            <h2 data-i18n="privacy.section1.title">1. Data protection at a glance</h2>
             <div>
-                <h3 class="highlight">General information</h3>
-                <p class="legal__text">
+                <h3 class="highlight" data-i18n="privacy.section1.general.title">General information</h3>
+                <p class="legal__text" data-i18n="privacy.section1.general.text">
                     The following notes provide a simple overview of what
                     happens to your personal data when you visit this
                     website. Personal data means all data that can be used
@@ -57,15 +60,15 @@
                 </p>
             </div>
             <div class="gap-16">
-                <h3 class="highlight">
+                <h3 class="highlight" data-i18n="privacy.section1.collection.title">
                     Data collection on this website
                 </h3>
                 <div>
-                    <h4 class="text__wrapper--subheadline">
+                    <h4 class="text__wrapper--subheadline" data-i18n="privacy.section1.collection.controller.title">
                         Who is responsible for data collection on this
                         website?
                     </h4>
-                    <p>
+                    <p data-i18n="privacy.section1.collection.controller.text">
                         Data processing on this website is carried out by the
                         website operator. You can find the operator’s contact
                         details in the section “Note on the controller” in
@@ -73,14 +76,14 @@
                     </p>
                 </div>
                 <div>
-                    <h4 class="text__wrapper--subheadline">How do we collect your data?</h4>
+                    <h4 class="text__wrapper--subheadline" data-i18n="privacy.section1.collection.how.title">How do we collect your data?</h4>
                     <div>
-                        <p>
+                        <p data-i18n="privacy.section1.collection.how.text1">
                             On the one hand, your data is collected when you
                             provide it to us. This may, for example, be data
                             that you enter in a contact form.
                         </p>
-                        <p>
+                        <p data-i18n="privacy.section1.collection.how.text2">
                             Other data is collected automatically or after
                             your consent when you visit the website by our IT
                             systems. This is mainly technical data (e.g.
@@ -91,8 +94,8 @@
                     </div>
                 </div>
                 <div>
-                    <h4 class="text__wrapper--subheadline">What do we use your data for?</h4>
-                    <p>
+                    <h4 class="text__wrapper--subheadline" data-i18n="privacy.section1.collection.usage.title">What do we use your data for?</h4>
+                    <p data-i18n="privacy.section1.collection.usage.text">
                         Part of the data is collected to ensure error-free
                         provision of the website. Other data may be used to
                         analyze user behavior. If contracts can be concluded
@@ -102,9 +105,9 @@
                     </p>
                 </div>
                 <div>
-                    <h4 class="text__wrapper--subheadline">What rights do you have regarding your data?</h4>
+                    <h4 class="text__wrapper--subheadline" data-i18n="privacy.section1.collection.rights.title">What rights do you have regarding your data?</h4>
                     <div>
-                        <p>
+                        <p data-i18n="privacy.section1.collection.rights.text1">
                             You have the right to receive information free of
                             charge at any time about the origin, recipients,
                             and purpose of your stored personal data. You also
@@ -118,7 +121,7 @@
                             lodge a complaint with the competent supervisory
                             authority.
                         </p>
-                        <p>
+                        <p data-i18n="privacy.section1.collection.rights.text2">
                             You can contact us at any time regarding this and
                             any other questions on the subject of data
                             protection.
@@ -126,14 +129,14 @@
                     </div>
                 </div>
                 <div>
-                    <h4 class="text__wrapper--subheadline">Analytics tools and third-party tools</h4>
+                    <h4 class="text__wrapper--subheadline" data-i18n="privacy.section1.collection.analytics.title">Analytics tools and third-party tools</h4>
                     <div>
-                        <p>
+                        <p data-i18n="privacy.section1.collection.analytics.text1">
                             When visiting this website, your surfing behavior
                             may be statistically evaluated. This is done
                             primarily with so‑called analysis programs.
                         </p>
-                        <p>
+                        <p data-i18n="privacy.section1.collection.analytics.text2">
                             Detailed information on these analysis programs
                             can be found in the privacy policy below.
                         </p>
@@ -141,16 +144,16 @@
                 </div>
             </div>
             <div>
-                <h2>2. Hosting</h2>
-                <p class="legal__text">
+                <h2 data-i18n="privacy.section2.title">2. Hosting</h2>
+                <p class="legal__text" data-i18n="privacy.section2.intro">
                     We host the content of our website with the following
                     provider:
                 </p>
             </div>
             <div>
-                <h3 class="highlight">External hosting</h3>
+                <h3 class="highlight" data-i18n="privacy.section2.external.title">External hosting</h3>
                 <div class="gap-16">
-                    <p>
+                    <p data-i18n="privacy.section2.external.text1">
                         This website is hosted externally. The personal data
                         collected on this website is stored on the servers of
                         the hosting provider(s). This may include, in
@@ -159,7 +162,7 @@
                         names, website access data and other data generated
                         via a website.
                     </p>
-                    <p>
+                    <p data-i18n="privacy.section2.external.text2">
                         External hosting is carried out for the purpose of
                         fulfilling contracts with our potential and existing
                         users (Art. 6(1)(b) GDPR) and in the interest of a
@@ -173,39 +176,39 @@
                         fingerprinting) within the meaning of the TDDDG.
                         Consent can be withdrawn at any time.
                     </p>
-                    <p>
+                    <p data-i18n="privacy.section2.external.text3">
                         Our hosting provider(s) will only process your data
                         to the extent necessary to fulfill its performance
                         obligations and will follow our instructions with
                         regard to this data.
                     </p>
-                    <p>
+                    <p data-i18n="privacy.section2.external.text4">
                         We use the following hosting provider(s):
                     </p>
-                    <p>
+                    <p data-i18n="privacy.section2.external.text5">
                         [Name and full address of the hosting provider]
                     </p>
                 </div>
             </div>
-            <h2 class="legal__heading">
+            <h2 class="legal__heading" data-i18n="privacy.section3.title">
                 3. General notes
             </h2>
             <div>
-                <h3 class="highlight">Data protection</h3>
-                <p>
+                <h3 class="highlight" data-i18n="privacy.section3.dataProtection.title">Data protection</h3>
+                <p data-i18n="privacy.section3.dataProtection.text1">
                     The operators of these pages take the protection of your
                     personal data very seriously. We treat your personal
                     data confidentially and in accordance with statutory
                     data protection regulations and this privacy policy.
                 </p>
-                <p>
+                <p data-i18n="privacy.section3.dataProtection.text2">
                     When you use this website, various personal data are
                     collected. Personal data is data with which you can be
                     personally identified. This privacy policy explains what
                     data we collect and what we use it for. It also explains
                     how and for what purpose this is done.
                 </p>
-                <p>
+                <p data-i18n="privacy.section3.dataProtection.text3">
                     We point out that data transmission on the Internet
                     (e.g. when communicating by email) may have security
                     gaps. Complete protection of the data from access by
@@ -213,21 +216,21 @@
                 </p>
             </div>
             <div>
-                <h3 class="highlight">Note on the controller</h3>
-                <p>
+                <h3 class="highlight" data-i18n="privacy.section3.controller.title">Note on the controller</h3>
+                <p data-i18n="privacy.section3.controller.text1">
                     The controller responsible for data processing on this
                     website is:
                 </p>
-                <p>
+                <p data-i18n="privacy.section3.controller.text2">
                     Matthias Arnoldy<br />
                     Hauptstraße 57<br />
                     54455 Serrig, Germany
                 </p>
-                <p>
+                <p data-i18n="privacy.section3.controller.text3">
                     Phone: 01512 9827139<br />
                     Email: m.arnoldy@outlook.de
                 </p>
-                <p>
+                <p data-i18n="privacy.section3.controller.text4">
                     The controller is the natural or legal person who, alone
                     or jointly with others, decides on the purposes and
                     means of processing personal data (e.g. names, email
@@ -235,8 +238,8 @@
                 </p>
             </div>
             <div>
-                <h3 class="highlight">Storage period</h3>
-                <p>
+                <h3 class="highlight" data-i18n="privacy.section3.storage.title">Storage period</h3>
+                <p data-i18n="privacy.section3.storage.text">
                     Unless a more specific storage period is specified in
                     this privacy policy, your personal data will remain with
                     us until the purpose for the data processing no longer
@@ -250,11 +253,11 @@
                 </p>
             </div>
             <div>
-                <h3 class="highlight">
+                <h3 class="highlight" data-i18n="privacy.section3.legalBases.title">
                     General information on the legal bases of data
                     processing
                 </h3>
-                <p>
+                <p data-i18n="privacy.section3.legalBases.text">
                     If you have consented to data processing, we process
                     your personal data on the basis of Art. 6(1)(a) GDPR or
                     Art. 9(2)(a) GDPR if special categories of data are
@@ -268,10 +271,10 @@
                 </p>
             </div>
             <div>
-                <h3 class="highlight">
+                <h3 class="highlight" data-i18n="privacy.section3.recipients.title">
                     Recipients of personal data
                 </h3>
-                <p>
+                <p data-i18n="privacy.section3.recipients.text">
                     In the course of our business activities, we work with
                     various external parties. Personal data is only
                     transferred if this is necessary for the performance of
@@ -281,9 +284,9 @@
                 </p>
             </div>
             <div>
-                <h3 class="highlight">Your rights</h3>
+                <h3 class="highlight" data-i18n="privacy.section3.rights.title">Your rights</h3>
                 <div class="gap-16">
-                    <p>
+                    <p data-i18n="privacy.section3.rights.text1">
                         You have the right at any time to receive information
                         about your stored personal data, its origin and
                         recipients and the purpose of the data processing.
@@ -291,7 +294,7 @@
                         erasure, restriction of processing and data
                         portability.
                     </p>
-                    <p>
+                    <p data-i18n="privacy.section3.rights.text2">
                         You may revoke your consent at any time. Furthermore,
                         you have the right to lodge a complaint with the
                         competent supervisory authority.
@@ -299,24 +302,24 @@
                 </div>
             </div>
             <div>
-                <h3 class="highlight">SSL/TLS encryption</h3>
-                <p>
+                <h3 class="highlight" data-i18n="privacy.section3.ssl.title">SSL/TLS encryption</h3>
+                <p data-i18n="privacy.section3.ssl.text1">
                     This site uses SSL or TLS encryption for security
                     reasons and to protect the transmission of confidential
                     content. An encrypted connection can be recognized by
                     “https://” in the browser address line and the lock
                     symbol.
                 </p>
-                <p>
+                <p data-i18n="privacy.section3.ssl.text2">
                     If SSL or TLS encryption is activated, the data you
                     transmit to us cannot be read by third parties.
                 </p>
             </div>
             <div>
-                <h3 class="highlight">
+                <h3 class="highlight" data-i18n="privacy.section3.objection.title">
                     Objection to advertising emails
                 </h3>
-                <p>
+                <p data-i18n="privacy.section3.objection.text">
                     The use of contact data published within the scope of
                     legal notice obligations for sending unsolicited
                     advertising and information materials is hereby objected
@@ -325,14 +328,14 @@
                     information (e.g. spam emails).
                 </p>
             </div>
-            <h2 class="legal__heading">
+            <h2 class="legal__heading" data-i18n="privacy.section4.title">
                 4. Data collection on this website
             </h2>
             <div class="gap-16">
                 <div>
-                    <h3 class="highlight">Cookies</h3>
+                    <h3 class="highlight" data-i18n="privacy.section4.cookies.title">Cookies</h3>
                     <div class="gap-16">
-                    <p>
+                    <p data-i18n="privacy.section4.cookies.text1">
                         Our internet pages use so-called “cookies”. Cookies
                         are small data packages that do not cause any damage
                         to your device. They are either stored temporarily
@@ -343,7 +346,7 @@
                         until you delete them yourself or your web browser
                         automatically deletes them.
                     </p>
-                    <p>
+                    <p data-i18n="privacy.section4.cookies.text2">
                         Cookies can originate from us (first-party cookies)
                         or from third-party companies (so-called third-party
                         cookies). Third-party cookies enable the integration
@@ -351,7 +354,7 @@
                         websites (e.g. cookies for processing payment
                         services).
                     </p>
-                    <p>
+                    <p data-i18n="privacy.section4.cookies.text3">
                         Cookies have various functions. Numerous cookies are
                         technically necessary because certain website
                         functions would not work without them (e.g. login
@@ -359,7 +362,7 @@
                         be used to evaluate user behavior or for advertising
                         purposes.
                     </p>
-                    <p>
+                    <p data-i18n="privacy.section4.cookies.text4">
                         Cookies that are necessary for the electronic
                         communication process, to provide certain functions
                         you have requested (e.g. login) or to optimize the
@@ -375,7 +378,7 @@
                         this consent (Art. 6(1)(a) GDPR and Section 25(1)
                         TDDDG); consent can be revoked at any time.
                     </p>
-                    <p>
+                    <p data-i18n="privacy.section4.cookies.text5">
                         You can set your browser to inform you about the
                         setting of cookies and to allow cookies only in
                         individual cases, to exclude the acceptance of
@@ -384,34 +387,34 @@
                         closing the browser. If cookies are deactivated, the
                         functionality of this website may be restricted.
                     </p>
-                    <p>
+                    <p data-i18n="privacy.section4.cookies.text6">
                         You can find which cookies and services are used on
                         this website in this privacy policy.
                     </p>
                     </div>
                 </div>
                 <div>
-                    <h3 class="highlight">Server log files</h3>
+                    <h3 class="highlight" data-i18n="privacy.section4.serverLogs.title">Server log files</h3>
                     <div class="gap-16">
-                    <p>
+                    <p data-i18n="privacy.section4.serverLogs.text1">
                         The provider of the pages automatically collects and
                         stores information in so-called server log files that
                         your browser automatically transmits to us. These
                         are:
                     </p>
                     <ul>
-                        <li>Browser type and version</li>
-                        <li>Operating system used</li>
-                        <li>Referrer URL</li>
-                        <li>Host name of the accessing computer</li>
-                        <li>Time of the server request</li>
-                        <li>IP address</li>
+                        <li data-i18n="privacy.section4.serverLogs.list.browser">Browser type and version</li>
+                        <li data-i18n="privacy.section4.serverLogs.list.os">Operating system used</li>
+                        <li data-i18n="privacy.section4.serverLogs.list.referrer">Referrer URL</li>
+                        <li data-i18n="privacy.section4.serverLogs.list.host">Host name of the accessing computer</li>
+                        <li data-i18n="privacy.section4.serverLogs.list.time">Time of the server request</li>
+                        <li data-i18n="privacy.section4.serverLogs.list.ip">IP address</li>
                     </ul>
-                    <p>
+                    <p data-i18n="privacy.section4.serverLogs.text2">
                         This data will not be combined with other data
                         sources.
                     </p>
-                    <p>
+                    <p data-i18n="privacy.section4.serverLogs.text3">
                         The collection of this data is based on Art. 6(1)(f)
                         GDPR. The website operator has a legitimate interest
                         in the technically error-free presentation and
@@ -421,9 +424,9 @@
                     </div>
                 </div>
                 <div>
-                    <h3 class="highlight">Contact form</h3>
+                    <h3 class="highlight" data-i18n="privacy.section4.contactForm.title">Contact form</h3>
                     <div class="gap-16">
-                    <p>
+                    <p data-i18n="privacy.section4.contactForm.text1">
                         If you send us inquiries via the contact form, your
                         details from the inquiry form, including the contact
                         details you provide there, will be stored by us for
@@ -431,7 +434,7 @@
                         follow-up questions. We do not pass on this data
                         without your consent.
                     </p>
-                    <p>
+                    <p data-i18n="privacy.section4.contactForm.text2">
                         The processing of this data is based on Art. 6(1)(b)
                         GDPR if your request is related to the performance of
                         a contract or is necessary for the implementation of
@@ -442,7 +445,7 @@
                         GDPR) if requested; consent can be revoked at any
                         time.
                     </p>
-                    <p>
+                    <p data-i18n="privacy.section4.contactForm.text3">
                         The data you enter in the contact form will remain
                         with us until you ask us to delete it, revoke your
                         consent to storage, or the purpose for data storage
@@ -453,18 +456,18 @@
                     </div>
                 </div>
                 <div>
-                    <h3 class="highlight">
+                    <h3 class="highlight" data-i18n="privacy.section4.contactRequests.title">
                         Request by email, telephone or fax
                     </h3>
                     <div class="gap-16">
-                    <p>
+                    <p data-i18n="privacy.section4.contactRequests.text1">
                         If you contact us by email, telephone or fax, your
                         request, including all resulting personal data (name,
                         request), will be stored and processed by us for the
                         purpose of processing your request. We do not pass on
                         this data without your consent.
                     </p>
-                    <p>
+                    <p data-i18n="privacy.section4.contactRequests.text2">
                         The processing of this data is based on Art. 6(1)(b)
                         GDPR if your request is related to the performance of
                         a contract or is necessary for the implementation of
@@ -475,7 +478,7 @@
                         GDPR) if requested; consent can be revoked at any
                         time.
                     </p>
-                    <p>
+                    <p data-i18n="privacy.section4.contactRequests.text3">
                         The data sent by you to us via contact requests will
                         remain with us until you request deletion, revoke
                         your consent to storage or the purpose for data
@@ -487,11 +490,11 @@
                     </div>
                 </div>
                 <div>
-                    <h3 class="highlight">
+                    <h3 class="highlight" data-i18n="privacy.section4.registration.title">
                         User registration on this website
                     </h3>
                     <div class="gap-16">
-                    <p>
+                    <p data-i18n="privacy.section4.registration.text1">
                         You can create a demo account to use the Join kanban
                         application. For this purpose, we process the data
                         you provide during registration (e.g. name, email
@@ -501,14 +504,14 @@
                         processes your login data on our behalf and provides
                         us with a user ID and basic profile data.
                     </p>
-                    <p>
+                    <p data-i18n="privacy.section4.registration.text2">
                         The legal basis is your consent (Art. 6(1)(a) GDPR).
                         In addition, processing may be necessary for the
                         performance of a (demo) usage agreement (Art. 6(1)(b)
                         GDPR), as registration is required to use core
                         functions (e.g. saving tasks/boards).
                     </p>
-                    <p>
+                    <p data-i18n="privacy.section4.registration.text3">
                         Mandatory information requested during registration
                         must be provided in full; otherwise, registration
                         will be rejected. We use the data solely to provide
@@ -517,14 +520,14 @@
                         there is a legal obligation or you have given
                         consent.
                     </p>
-                    <p>
+                    <p data-i18n="privacy.section4.registration.text4">
                         Data retention: We store your account data until you
                         delete your account or request deletion. We also
                         reserve the right to regularly delete inactive demo
                         accounts and associated content after a reasonable
                         period in order to keep the demo instance clean.
                     </p>
-                    <p>
+                    <p data-i18n="privacy.section4.registration.text5">
                         Social login: If social login (e.g. “Sign in with
                         Google”) is offered and used, the respective provider
                         will transmit the information required for
@@ -534,7 +537,7 @@
                         provider’s own privacy policy. Use of social login is
                         voluntary.
                     </p>
-                    <p>
+                    <p data-i18n="privacy.section4.registration.text6">
                         Deletion of the account: You can request deletion of
                         your account at any time by contacting us via the
                         contact options provided in this privacy policy.
@@ -543,9 +546,9 @@
                 </div>
             </div>
             <p>
-                Source:
+                <span data-i18n="privacy.source.label">Source:</span>
                 <a class="legal__link" href="https://www.e-recht24.de" target="_blank" rel="noopener noreferrer"
-                    aria-label="Open e-recht24 (opens in a new tab)">https://www.e-recht24.de</a>
+                    aria-label="Open e-recht24 (opens in a new tab)" data-i18n-aria-label="privacy.source.linkAria">https://www.e-recht24.de</a>
             </p>
         </section>
     </main>
@@ -555,7 +558,7 @@
                 <div class="footer__content">
                     <footer>
                         <div class="footer__copyright">
-                            <img class="footer__initial" src="../assets/icons/initialLight.svg" alt="Initial Logo">
+                            <img class="footer__initial" src="../assets/icons/initialLight.svg" alt="Initial Logo" data-i18n-alt="footer.logoAlt">
                             <p class="footer__copyright--text default__text default__text--22 default__text--400">&copy;
                                 Matthias Arnoldy 2026</p>
                             <a class="footer__mail default__text default__text--22 default__text--300 legal__link"
@@ -563,22 +566,22 @@
                         </div>
                         <div class="footer__quicklinks">
                             <a class="footer__icon-wrap" href="https://github.com/matthiasarnoldy" target="_blank"
-                                rel="noopener noreferrer" aria-label="Open GitHub (opens in a new tab)">
-                                <img class="footer__icon" src="../assets/icons/github.svg" alt="GitHub">
+                                rel="noopener noreferrer" aria-label="Open GitHub (opens in a new tab)" data-i18n-aria-label="footer.links.github">
+                                <img class="footer__icon" src="../assets/icons/github.svg" alt="GitHub" data-i18n-alt="footer.links.githubAlt">
                             </a>
                             <a class="footer__icon-wrap" href="mailto:m.arnoldy@outlook.de"
-                                aria-label="Write an E-Mail">
-                                <img class="footer__icon" src="../assets/icons/email.svg" alt="Email">
+                                aria-label="Write an E-Mail" data-i18n-aria-label="footer.links.mail">
+                                <img class="footer__icon" src="../assets/icons/email.svg" alt="Email" data-i18n-alt="footer.links.mailAlt">
                             </a>
                             <a class="footer__icon-wrap" href="https://www.linkedin.com/" target="_blank"
-                                rel="noopener noreferrer" aria-label="Open LinkedIn (opens in a new tab)">
-                                <img class="footer__icon" src="../assets/icons/linkedIn.svg" alt="LinkedIn">
+                                rel="noopener noreferrer" aria-label="Open LinkedIn (opens in a new tab)" data-i18n-aria-label="footer.links.linkedin">
+                                <img class="footer__icon" src="../assets/icons/linkedIn.svg" alt="LinkedIn" data-i18n-alt="footer.links.linkedinAlt">
                             </a>
                         </div>
                     </footer>
                     <div class="footer__legalnotice">
                         <a href="./legalNotice.html"
-                            class="footer__legalnotice--text default__text default__text--16 default__text--400">Legal
+                            class="footer__legalnotice--text default__text default__text--16 default__text--400" data-i18n="footer.legalNotice">Legal
                             notice</a>
                     </div>
                 </div>

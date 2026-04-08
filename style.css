@@ -1177,3 +1177,75 @@ footer {
 .footer__legalnotice--text:hover {
     font-weight: 700;
 }
+
+.burger-dialog {
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg);
+    align-items: stretch;
+    flex-direction: column;
+    border: none;
+}
+
+.burger-dialog:not([open]) {
+    display: none;
+}
+
+.burger-dialog[open] {
+    display: flex;
+}
+
+.burger-dialog__content {
+    width: 100%;
+    padding-top: 98px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    gap: 35px;
+}
+
+.dialog__quicklink {
+    position: relative;
+    padding: 36px 39px;
+    line-height: 1.0;
+    color: var(--color-text);
+}
+
+.dialog__quicklink--text {
+    display: inline-block;
+    font-family: "Syne", Arial, Helvetica, sans-serif;
+    font-size: clamp(45px, calc(30.43px + 4.55vw), 96px);
+    font-weight: 700;
+    min-width: clamp(244px, calc(165.14px + 24.64vw), 520px);
+    white-space: nowrap;
+    text-align: center;
+}
+
+.dialog__quicklink--icon {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.dialog__panel-shell {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 12vw, 100% 100%, 0 100%);
+}
+
+.dialog__panel {
+    min-height: 0;
+    background-color: var(--color-text);
+    clip-path: polygon(0 0, 100% 12vw, 100% 100%, 0 100%);
+}
+
+.dialog__content {
+    padding-top: 10vw;
+}

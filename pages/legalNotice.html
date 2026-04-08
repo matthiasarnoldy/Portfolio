@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Notice</title>
+    <title data-i18n="legal.meta.title">Legal Notice</title>
 
     <link rel="icon" href="../assets/icons/initialDark.svg" media="(prefers-color-scheme: light)" type="image/svg+xml">
     <link rel="icon" href="../assets/icons/initialLight.svg" media="(prefers-color-scheme: dark)" type="image/svg+xml">
+
+    <script src="../scripts/translations.js" defer></script>
+    <script src="../scripts/script.js" defer></script>
 
     <link rel="stylesheet" href="../styles/animation.css">
     <link rel="stylesheet" href="../styles/default.css">
@@ -17,53 +20,51 @@
     <link rel="stylesheet" href="../styles/legalInformation/responsive.css">
 </head>
 
-<body>
-    <a href="#main-content" class="sr-only skip-link">Skip to main content</a>
+<body onload="init()">
+    <a href="#main-content" class="sr-only skip-link" data-i18n="a11y.skipToMain">Skip to main content</a>
     <header class="navbar background__color--default">
         <div class="header__inner">
-            <img class="logo" src="../assets/icons/initialDark.svg" alt="Initial Logo">
-            <nav>
-                <button class="burgermenu__button" type="button" aria-label="Open menu">
-                    <svg class="burgermenu" width="44" height="38" viewBox="0 0 44 38" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path class="burgermenu__line burgermenu__line--top" d="M2 2H42" stroke="black" stroke-width="4"
-                            stroke-linecap="square" vector-effect="non-scaling-stroke" />
-                        <path class="burgermenu__line burgermenu__line--middle" d="M2 19H42" stroke="black"
-                            stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke" />
-                        <path class="burgermenu__line burgermenu__line--bottom" d="M2 36H42" stroke="black"
-                            stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke" />
-                    </svg>
-                </button>
-            </nav>
+            <img class="logo" src="../assets/icons/initialDark.svg" alt="Initial Logo" data-i18n-alt="header.logoAlt">
+            <button class="burgermenu__button" type="button" aria-label="Open menu" data-i18n-aria-label="header.openMenu">
+                <svg class="burgermenu" width="44" height="38" viewBox="0 0 44 38" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path class="burgermenu__line burgermenu__line--top" d="M2 2H42" stroke="black" stroke-width="4"
+                        stroke-linecap="square" vector-effect="non-scaling-stroke" />
+                    <path class="burgermenu__line burgermenu__line--middle" d="M2 19H42" stroke="black"
+                        stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke" />
+                    <path class="burgermenu__line burgermenu__line--bottom" d="M2 36H42" stroke="black"
+                        stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke" />
+                </svg>
+            </button>
         </div>
     </header>
-    <a class="legal__back-link" href="../index.html" aria-label="Back to homepage">
+    <a class="legal__back-link" href="../index.html" aria-label="Back to homepage" data-i18n-aria-label="legal.backToHomepage">
         <svg class="legal__icon" width="55" height="39" viewBox="0 0 55 39" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16.6729 1.23828L2.54664 19.1645L16.6728 37.0907" stroke="black" stroke-width="4" />
             <path d="M54.5898 19.1641L2.5459 19.1641" stroke="black" stroke-width="4" />
         </svg>
     </a>
     <main id="main-content" tabindex="-1">
-        <h1>Legal Notice</h1>
+        <h1 data-i18n="legal.title">Legal Notice</h1>
         <section class="gap-16">
             <div class="gap-16">
-                <h2 class="text__wrapper--headline highlight">Imprint</h2>
+                <h2 class="text__wrapper--headline highlight" data-i18n="legal.imprint.headline">Imprint</h2>
                 <ul>
-                    <li class="default__text default__text--16 default__text--400">Matthias Arnoldy</li>
-                    <li class="default__text default__text--16 default__text--400">Hauptstrasse 57</li>
-                    <li class="default__text default__text--16 default__text--400">54455 Serrig</li>
+                    <li class="default__text default__text--16 default__text--400" data-i18n="legal.imprint.name">Matthias Arnoldy</li>
+                    <li class="default__text default__text--16 default__text--400" data-i18n="legal.imprint.street">Hauptstrasse 57</li>
+                    <li class="default__text default__text--16 default__text--400" data-i18n="legal.imprint.city">54455 Serrig</li>
                 </ul>
             </div>
             <div>
-                <h2 class="text__wrapper--headline highlight">Explore the Board</h2>
+                <h2 class="text__wrapper--headline highlight" data-i18n="legal.explore.headline">Explore the Board</h2>
                 <p class="default__text default__text--16 default__text--400">
-                    Email:
+                    <span data-i18n="legal.explore.emailLabel">Email:</span>
                     <a class="legal__link highlight" href="../index.html#contact">m.arnoldy@outlook.de</a>
                 </p>
             </div>
             <div>
-                <h2 class="text__wrapper--headline highlight">Acceptance of terms</h2>
-                <p class="default__text default__text--16 default__text--400">
+                <h2 class="text__wrapper--headline highlight" data-i18n="legal.acceptance.headline">Acceptance of terms</h2>
+                <p class="default__text default__text--16 default__text--400" data-i18n="legal.acceptance.text" data-i18n-mode="html">
                     By accessing and using <span class="highlight">Portfolio</span> (Product), you acknowledge and
                     agree to the following terms and
                     conditions, and any policies, guidelines, or amendments thereto that may be presented to you
@@ -72,9 +73,9 @@
                 </p>
             </div>
             <div>
-                <h2 class="text__wrapper--headline highlight">Scope and ownership of the product</h2>
+                <h2 class="text__wrapper--headline highlight" data-i18n="legal.scope.headline">Scope and ownership of the product</h2>
                 <div class="gap-16 default__text default__text--16 default__text--400">
-                    <p>
+                    <p data-i18n="legal.scope.text1" data-i18n-mode="html">
                         <span class="highlight">Portfolio</span> has been developed as part of a student group
                         project in a web development
                         bootcamp at the <span class="highlight">Developer Akademie GmbH</span>. It has an
@@ -82,7 +83,7 @@
                         for extensive personal & business usage. As such, we cannot guarantee consistent
                         availability, reliability, accuracy, or any other aspect of quality regarding this Product.
                     </p>
-                    <p>
+                    <p data-i18n="legal.scope.text2" data-i18n-mode="html">
                         The design of <span class="highlight">Portfolio</span> is owned by the <span
                             class="highlight">Developer Akademie GmbH</span>. Unauthorized use,
                         reproduction, modification, distribution, or replication of the design is strictly
@@ -91,8 +92,8 @@
                 </div>
             </div>
             <div>
-                <h2 class="text__wrapper--headline highlight">Proprietary rights</h2>
-                <p class="default__text default__text--16 default__text--400">
+                <h2 class="text__wrapper--headline highlight" data-i18n="legal.proprietary.headline">Proprietary rights</h2>
+                <p class="default__text default__text--16 default__text--400" data-i18n="legal.proprietary.text" data-i18n-mode="html">
                     Aside from the design owned by <span class="highlight">Developer Akademie GmbH</span>, we, the
                     listed students, retain all
                     proprietary rights in <span class="highlight">Portfolio</span>, including any associated
@@ -101,8 +102,8 @@
                 </p>
             </div>
             <div>
-                <h2 class="text__wrapper--headline highlight">Use of the product</h2>
-                <p class="default__text default__text--16 default__text--400">
+                <h2 class="text__wrapper--headline highlight" data-i18n="legal.use.headline">Use of the product</h2>
+                <p class="default__text default__text--16 default__text--400" data-i18n="legal.use.text" data-i18n-mode="html">
                     <span class="highlight">Portfolio</span> is intended to be used for lawful purposes only, in
                     accordance with all applicable
                     laws and regulations. Any use of <span class="highlight">Portfolio</span> for illegal
@@ -112,9 +113,9 @@
                 </p>
             </div>
             <div>
-                <h2 class="text__wrapper--headline highlight">Disclaimer of warranties and limitation of liability
+                <h2 class="text__wrapper--headline highlight" data-i18n="legal.disclaimer.headline">Disclaimer of warranties and limitation of liability
                 </h2>
-                <p class="default__text default__text--16 default__text--400">
+                <p class="default__text default__text--16 default__text--400" data-i18n="legal.disclaimer.text" data-i18n-mode="html">
                     <span class="highlight">Portfolio</span> is provided "as is" without warranty of any kind,
                     whether express or implied,
                     including but not limited to the implied warranties of merchantability, fitness for a particular
@@ -128,9 +129,9 @@
                 </p>
             </div>
             <div>
-                <h2 class="text__wrapper--headline highlight">Indemnity</h2>
+                <h2 class="text__wrapper--headline highlight" data-i18n="legal.indemnity.headline">Indemnity</h2>
                 <div class="gap-16 default__text default__text--16 default__text--400">
-                    <p>
+                    <p data-i18n="legal.indemnity.text1" data-i18n-mode="html">
                         You agree to indemnify, defend and hold harmless us, the listed students, the <span
                             class="highlight">Developer Akademie</span>
                         , and our affiliates, partners, officers, directors, agents, and employees, from and
@@ -140,11 +141,11 @@
                         your breach of this Legal Notice.
                     </p>
                     <p>
-                        For any questions or notices, please contact us at
+                        <span data-i18n="legal.indemnity.contactPrefix">For any questions or notices, please contact us at</span>
                         <a class="legal__link highlight" href="../index.html#contact">m.arnoldy@outlook.de</a>
-                        .
+                        <span data-i18n="legal.indemnity.contactSuffix">.</span>
                     </p>
-                    <p>
+                    <p data-i18n="legal.indemnity.date">
                         Date: April 07, 2026
                     </p>
                 </div>
@@ -157,7 +158,7 @@
                 <div class="footer__content">
                     <footer>
                         <div class="footer__copyright">
-                            <img class="footer__initial" src="../assets/icons/initialLight.svg" alt="Initial Logo">
+                            <img class="footer__initial" src="../assets/icons/initialLight.svg" alt="Initial Logo" data-i18n-alt="footer.logoAlt">
                             <p class="footer__copyright--text default__text default__text--22 default__text--400">&copy;
                                 Matthias Arnoldy 2026</p>
                             <a class="footer__mail default__text default__text--22 default__text--300"
@@ -165,22 +166,22 @@
                         </div>
                         <div class="footer__quicklinks">
                             <a class="footer__icon-wrap" href="https://github.com/matthiasarnoldy" target="_blank"
-                                rel="noopener noreferrer" aria-label="Open GitHub (opens in a new tab)">
-                                <img class="footer__icon" src="../assets/icons/github.svg" alt="GitHub">
+                                rel="noopener noreferrer" aria-label="Open GitHub (opens in a new tab)" data-i18n-aria-label="footer.links.github">
+                                <img class="footer__icon" src="../assets/icons/github.svg" alt="GitHub" data-i18n-alt="footer.links.githubAlt">
                             </a>
                             <a class="footer__icon-wrap" href="mailto:m.arnoldy@outlook.de"
-                                aria-label="Write an E-Mail">
-                                <img class="footer__icon" src="../assets/icons/email.svg" alt="Email">
+                                aria-label="Write an E-Mail" data-i18n-aria-label="footer.links.mail">
+                                <img class="footer__icon" src="../assets/icons/email.svg" alt="Email" data-i18n-alt="footer.links.mailAlt">
                             </a>
                             <a class="footer__icon-wrap" href="https://www.linkedin.com/" target="_blank"
-                                rel="noopener noreferrer" aria-label="Open LinkedIn (opens in a new tab)">
-                                <img class="footer__icon" src="../assets/icons/linkedIn.svg" alt="LinkedIn">
+                                rel="noopener noreferrer" aria-label="Open LinkedIn (opens in a new tab)" data-i18n-aria-label="footer.links.linkedin">
+                                <img class="footer__icon" src="../assets/icons/linkedIn.svg" alt="LinkedIn" data-i18n-alt="footer.links.linkedinAlt">
                             </a>
                         </div>
                     </footer>
                     <div class="footer__legalnotice">
                         <a href="#"
-                            class="footer__legalnotice--text default__text default__text--16 default__text--400">Legal
+                            class="footer__legalnotice--text default__text default__text--16 default__text--400" data-i18n="footer.legalNotice">Legal
                             notice</a>
                     </div>
                 </div>

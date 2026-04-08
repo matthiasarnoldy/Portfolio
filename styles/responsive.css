@@ -326,6 +326,14 @@
     .contact__formular--headline, .contact__formular--greeting {
         text-align: center;
     }
+
+    .dialog__panel-shell {
+        clip-path: polygon(0 0, 100% 6vw, 100% 100%, 0 100%);
+    }
+
+    .dialog__panel {
+        clip-path: polygon(0 0, 100% 6vw, 100% 100%, 0 100%);
+    }
 }
 
 @media (max-width: 520px) {
