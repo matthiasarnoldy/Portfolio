@@ -57,24 +57,31 @@ function closeDialog() {
 }
 
 function initLanguageToggle() {
-	const languageRadios = document.querySelectorAll('input[name="language"]');
+	const languageRadios = document.querySelectorAll(".language__radio");
 	const fallbackLanguage = document.documentElement.lang || "en";
 	if (!languageRadios.length) return fallbackLanguage;
 	const savedLanguage = localStorage.getItem("language");
 	const currentLanguage = savedLanguage || fallbackLanguage;
 	document.documentElement.lang = currentLanguage;
-	setupLanguageRadios(languageRadios, currentLanguage);
+	setLanguageRadiosChecked(languageRadios, currentLanguage);
+	setupLanguageRadios(languageRadios);
 	return currentLanguage;
 }
 
-function setupLanguageRadios(languageRadios, currentLanguage) {
+function setupLanguageRadios(languageRadios) {
 	languageRadios.forEach((radio) => {
-		radio.checked = radio.value === currentLanguage;
 		radio.addEventListener("change", () => {
 			document.documentElement.lang = radio.value;
 			localStorage.setItem("language", radio.value);
+			setLanguageRadiosChecked(languageRadios, radio.value);
 			applyTranslations(radio.value);
 		});
+	});
+}
+
+function setLanguageRadiosChecked(languageRadios, language) {
+	languageRadios.forEach((radio) => {
+		radio.checked = radio.value === language;
 	});
 }
 

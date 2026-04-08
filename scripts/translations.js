@@ -206,7 +206,7 @@ const translations = {
 		"about.info.remote": "Offen für Remote-Arbeit",
 		"about.cta": "Let's talk",
 		"about.profileImageAlt": "Profilbild",
-		"skills.headline": "Meine Fähigkeiten",
+		"skills.headline": "Fähigkeiten",
 		"dialog.nav.skills": "Fähigkeit",
 		"skills.learning.prefix": "Ist die von Ihnen gesuchte Qualifikation nicht dabei?",
 		"skills.learning.link": "Kontaktieren Sie mich",

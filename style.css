@@ -112,6 +112,10 @@ nav {
     gap: 6px;
 }
 
+.language__toogle--dialog {
+    display: none;
+}
+
 .language__box {
     padding: 3px 6px;
     display: flex;
@@ -1064,6 +1068,10 @@ footer {
     gap: 12px;
 }
 
+.footer__copyright.footer__copyright--dialog {
+    align-self: flex-start;
+}
+
 .footer__mail {
     color: var(--color-bg);
     display: none;
@@ -1072,6 +1080,10 @@ footer {
 .footer__quicklinks {
     display: flex;
     gap: 42px;
+}
+
+.footer__quicklinks.footer__quicklinks--dialog {
+    align-self: flex-end;
 }
 
 .footer__icon-wrap {
