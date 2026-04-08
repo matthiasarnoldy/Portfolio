@@ -22,19 +22,17 @@
     <header class="navbar background__color--default">
         <div class="header__inner">
             <img class="logo" src="../assets/icons/initialDark.svg" alt="Initial Logo">
-            <nav>
-                <button class="burgermenu__button" type="button" aria-label="Open menu">
-                    <svg class="burgermenu" width="44" height="38" viewBox="0 0 44 38" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path class="burgermenu__line burgermenu__line--top" d="M2 2H42" stroke="black" stroke-width="4"
-                            stroke-linecap="square" vector-effect="non-scaling-stroke" />
-                        <path class="burgermenu__line burgermenu__line--middle" d="M2 19H42" stroke="black"
-                            stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke" />
-                        <path class="burgermenu__line burgermenu__line--bottom" d="M2 36H42" stroke="black"
-                            stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke" />
-                    </svg>
-                </button>
-            </nav>
+            <button class="burgermenu__button" type="button" aria-label="Open menu">
+                <svg class="burgermenu" width="44" height="38" viewBox="0 0 44 38" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path class="burgermenu__line burgermenu__line--top" d="M2 2H42" stroke="black" stroke-width="4"
+                        stroke-linecap="square" vector-effect="non-scaling-stroke" />
+                    <path class="burgermenu__line burgermenu__line--middle" d="M2 19H42" stroke="black"
+                        stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke" />
+                    <path class="burgermenu__line burgermenu__line--bottom" d="M2 36H42" stroke="black"
+                        stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke" />
+                </svg>
+            </button>
         </div>
     </header>
     <a class="legal__back-link" href="../index.html" aria-label="Back to homepage">
@@ -43,7 +41,7 @@
             <path d="M54.5898 19.1641L2.5459 19.1641" stroke="black" stroke-width="4" />
         </svg>
     </a>
-    <main>
+    <main id="main-content" tabindex="-1">
         <h1>Privacy Policy</h1>
         <section class="gap-16">
             <h2>1. Data protection at a glance</h2>
@@ -330,9 +328,10 @@
             <h2 class="legal__heading">
                 4. Data collection on this website
             </h2>
-            <div>
-                <h3 class="highlight">Cookies</h3>
-                <div class="gap-16">
+            <div class="gap-16">
+                <div>
+                    <h3 class="highlight">Cookies</h3>
+                    <div class="gap-16">
                     <p>
                         Our internet pages use so-called “cookies”. Cookies
                         are small data packages that do not cause any damage
@@ -389,9 +388,11 @@
                         You can find which cookies and services are used on
                         this website in this privacy policy.
                     </p>
+                    </div>
                 </div>
-                <h3 class="highlight">Server log files</h3>
-                <div class="gap-16">
+                <div>
+                    <h3 class="highlight">Server log files</h3>
+                    <div class="gap-16">
                     <p>
                         The provider of the pages automatically collects and
                         stores information in so-called server log files that
@@ -417,9 +418,11 @@
                         optimization of the website – for this purpose, the
                         server log files must be collected.
                     </p>
+                    </div>
                 </div>
-                <h3 class="highlight">Contact form</h3>
-                <div class="gap-16">
+                <div>
+                    <h3 class="highlight">Contact form</h3>
+                    <div class="gap-16">
                     <p>
                         If you send us inquiries via the contact form, your
                         details from the inquiry form, including the contact
@@ -447,11 +450,13 @@
                         processed). Mandatory statutory provisions – in
                         particular retention periods – remain unaffected.
                     </p>
+                    </div>
                 </div>
-                <h3 class="highlight">
-                    Request by email, telephone or fax
-                </h3>
-                <div class="gap-16">
+                <div>
+                    <h3 class="highlight">
+                        Request by email, telephone or fax
+                    </h3>
+                    <div class="gap-16">
                     <p>
                         If you contact us by email, telephone or fax, your
                         request, including all resulting personal data (name,
@@ -479,11 +484,13 @@
                         in particular statutory retention periods – remain
                         unaffected.
                     </p>
+                    </div>
                 </div>
-                <h3 class="highlight">
-                    User registration on this website
-                </h3>
-                <div class="gap-16">
+                <div>
+                    <h3 class="highlight">
+                        User registration on this website
+                    </h3>
+                    <div class="gap-16">
                     <p>
                         You can create a demo account to use the Join kanban
                         application. For this purpose, we process the data
@@ -532,11 +539,13 @@
                         your account at any time by contacting us via the
                         contact options provided in this privacy policy.
                     </p>
+                    </div>
                 </div>
             </div>
             <p>
-                Source (German template):
-                <a href="https://www.e-recht24.de" target="_blank">https://www.e-recht24.de</a>
+                Source:
+                <a class="legal__link" href="https://www.e-recht24.de" target="_blank" rel="noopener noreferrer"
+                    aria-label="Open e-recht24 (opens in a new tab)">https://www.e-recht24.de</a>
             </p>
         </section>
     </main>
@@ -549,12 +558,12 @@
                             <img class="footer__initial" src="../assets/icons/initialLight.svg" alt="Initial Logo">
                             <p class="footer__copyright--text default__text default__text--22 default__text--400">&copy;
                                 Matthias Arnoldy 2026</p>
-                            <a class="footer__mail default__text default__text--22 default__text--300"
+                            <a class="footer__mail default__text default__text--22 default__text--300 legal__link"
                                 href="../index.html#contact">m.arnoldy@outlook.de</a>
                         </div>
                         <div class="footer__quicklinks">
                             <a class="footer__icon-wrap" href="https://github.com/matthiasarnoldy" target="_blank"
-                                rel="noopener noreferrer" aria-label="Open GitHub">
+                                rel="noopener noreferrer" aria-label="Open GitHub (opens in a new tab)">
                                 <img class="footer__icon" src="../assets/icons/github.svg" alt="GitHub">
                             </a>
                             <a class="footer__icon-wrap" href="mailto:m.arnoldy@outlook.de"
@@ -562,7 +571,7 @@
                                 <img class="footer__icon" src="../assets/icons/email.svg" alt="Email">
                             </a>
                             <a class="footer__icon-wrap" href="https://www.linkedin.com/" target="_blank"
-                                rel="noopener noreferrer" aria-label="Open LinkedIn">
+                                rel="noopener noreferrer" aria-label="Open LinkedIn (opens in a new tab)">
                                 <img class="footer__icon" src="../assets/icons/linkedIn.svg" alt="LinkedIn">
                             </a>
                         </div>

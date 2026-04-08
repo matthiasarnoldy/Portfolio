@@ -33,6 +33,51 @@ a {
     color: var(--color-highlight);
 }
 
+.legal__link {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    color: var(--color-highlight);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+}
+
+.legal__link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
+    height: 2px;
+    background-color: var(--color-highlight);
+    border-radius: 2px;
+    opacity: 0;
+    transform: translateX(-100%);
+    transform-origin: center;
+    transition: all 100ms ease-in;
+}
+
+.legal__link:hover::before {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.legal__link::after {
+    content: attr(data-text);
+    height: 0;
+    display: block;
+    font-weight: 700;
+    visibility: hidden;
+    white-space: nowrap;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.legal__link:hover {
+    font-weight: 700;
+}
+
 .legal__back-link {
     display: inline-flex;
     align-items: center;
