@@ -260,3 +260,16 @@
         transform: translate(-50%, 50vh);
     }
 }
+
+@keyframes dialogQuicklinkLineGrowLeft {
+    0% {
+        opacity: 1;
+        width: calc((100% - 78px) / 2);
+        right: 39px;
+    }
+    100% {
+        opacity: 1;
+        width: calc(100% - 78px);
+        right: 39px;
+    }
+}

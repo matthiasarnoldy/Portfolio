@@ -1,9 +1,33 @@
 function init() {
 	initBurgerButtonToggle();
 	initDialogLinks();
+	initArrowViewportAnimations();
 	initContactFormValidation();
 	const currentLanguage = initLanguageToggle();
 	applyTranslations(currentLanguage);
+}
+
+function initArrowViewportAnimations() {
+	const arrows = document.querySelectorAll(".arrow");
+	if (!arrows.length) return;
+	if (!("IntersectionObserver" in window)) {
+		arrows.forEach((arrow) => arrow.classList.add("is-in-view"));
+		return;
+	}
+	const observer = createArrowViewportObserver();
+	arrows.forEach((arrow) => observer.observe(arrow));
+}
+
+function createArrowViewportObserver() {
+	return new IntersectionObserver((entries, currentObserver) => {
+		entries.forEach((entry) => {
+			if (!entry.isIntersecting) return;
+			entry.target.classList.add("is-in-view");
+			currentObserver.unobserve(entry.target);
+		});
+	}, {
+		threshold: 1,
+	});
 }
 
 function initContactFormValidation() {

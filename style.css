@@ -362,12 +362,12 @@ main {
 }
 
 .arrow__right--head {
-    animation: arrowRightHeadSlide 1s ease-out forwards;
+    transform: translate(0, 0);
 }
 
 .arrow__right--shaft {
     stroke-dasharray: 70 30;
-    animation: arrowRightShaftStretch 1s ease-out forwards;
+    transform: translate(0, 0);
 }
 
 .arrow__left {
@@ -382,11 +382,27 @@ main {
 }
 
 .arrow__left--head {
-    animation: arrowLeftHeadSlide 1s ease-out forwards;
+    transform: translate(0, 0);
 }
 
 .arrow__left--shaft {
     stroke-dasharray: 70 30;
+    transform: translate(0, 0);
+}
+
+.arrow.is-in-view .arrow__right--head {
+    animation: arrowRightHeadSlide 1s ease-out forwards;
+}
+
+.arrow.is-in-view .arrow__right--shaft {
+    animation: arrowRightShaftStretch 1s ease-out forwards;
+}
+
+.arrow.is-in-view .arrow__left--head {
+    animation: arrowLeftHeadSlide 1s ease-out forwards;
+}
+
+.arrow.is-in-view .arrow__left--shaft {
     animation: arrowLeftShaftStretch 1s ease-out forwards;
 }
 
@@ -1282,7 +1298,9 @@ footer {
     max-height: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     background-color: var(--color-bg);
     align-items: stretch;
     flex-direction: column;
@@ -1295,6 +1313,14 @@ footer {
 
 .burger-dialog[open] {
     display: flex;
+}
+
+.burger-dialog .navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    flex-shrink: 0;
 }
 
 .burger-dialog[open] .burger-dialog__content {
@@ -1315,21 +1341,44 @@ footer {
 
 .burger-dialog__content {
     width: 100%;
-    padding-top: 98px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    flex: 1;
+    flex: 1 0 auto;
+    min-height: 0;
     gap: 35px;
     z-index: 999;
 }
 
+.burger-dialog .contact {
+    margin-top: 0;
+    margin-top: auto;
+    flex: 0 0 auto;
+    flex-shrink: 0;
+}
+
+.burger-dialog .dialog__panel-shell {
+    flex-shrink: 0;
+}
+
 .dialog__quicklink {
     position: relative;
-    padding: 36px 39px;
+    padding: 25px 29px;
     line-height: 1.0;
     color: var(--color-text);
+}
+
+.dialog__quicklink::after {
+    content: "";
+    position: absolute;
+    right: 39px;
+    left: auto;
+    bottom: 10px;
+    height: 3px;
+    width: calc((100% - 78px) / 2);
+    background-color: var(--color-text);
+    opacity: 0;
 }
 
 .dialog__quicklink--text {
@@ -1340,12 +1389,24 @@ footer {
     min-width: clamp(244px, calc(165.14px + 24.64vw), 520px);
     white-space: nowrap;
     text-align: center;
+    transition: color 180ms ease-in-out;
 }
 
 .dialog__quicklink--icon {
     position: absolute;
     left: 0;
     bottom: 0;
+    transition: opacity 220ms ease-in-out;
+}
+
+.dialog__quicklink:hover .dialog__quicklink--icon,
+.dialog__quicklink:focus-visible .dialog__quicklink--icon {
+    opacity: 0;
+}
+
+.dialog__quicklink:hover::after,
+.dialog__quicklink:focus-visible::after {
+    animation: dialogQuicklinkLineGrowLeft 500ms ease-out forwards;
 }
 
 .dialog__panel-shell {
