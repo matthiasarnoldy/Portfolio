@@ -26,6 +26,7 @@ function getContactFormElements() {
 		contactMessage: document.getElementById("contact-message"),
 		contactPrivacy: document.getElementById("contact-privacy"),
 		contactSubmitButton: document.querySelector(".contact__send"),
+		contactStatusMessage: document.getElementById("contactStatusMessage"),
 		contactNameError: document.getElementById("contactNameError"),
 		contactEmailError: document.getElementById("contactEmailError"),
 		contactMessageError: document.getElementById("contactMessageError"),
@@ -42,6 +43,8 @@ function setupContactFormListeners(formElements, touchedFields) {
 	setupEmailFieldListeners(contactEmail, formElements, touchedFields);
 	setupMessageFieldListeners(contactMessage, formElements, touchedFields);
 	setupPrivacyFieldListeners(contactPrivacy, formElements, touchedFields);
+	setupContactSubmitListener(formElements, touchedFields);
+	setupContactStatusMessageListener(formElements);
 	setupKeyboardFocusIndicators(formElements);
 	updateSubmitState(formElements);
 }
@@ -176,8 +179,157 @@ function updateSubmitState(formElements) {
 }
 
 function updateFormState(formElements, touchedFields) {
-	updateSubmitState(formElements);
+	const isFormValid = updateSubmitState(formElements);
 	updateFieldErrors(formElements, touchedFields);
+	return isFormValid;
+}
+
+function setupContactSubmitListener(formElements, touchedFields) {
+	formElements.contactSubmitButton.addEventListener("click", async (event) => {
+		await handleContactSubmit(event, formElements, touchedFields);
+	});
+}
+
+async function handleContactSubmit(event, formElements, touchedFields) {
+	event.preventDefault();
+	setAllFieldsTouched(touchedFields);
+	const isFormValid = updateFormState(formElements, touchedFields);
+	if (!isFormValid) {
+		focusFirstInvalidContactField(formElements);
+		return;
+	}
+	await processContactSubmitRequest(formElements, touchedFields);
+}
+
+async function processContactSubmitRequest(formElements, touchedFields) {
+	setSubmitButtonPendingState(formElements, true);
+	hideContactStatusMessage(formElements);
+	try {
+		await sendContactMessage(formElements);
+		resetContactFormState(formElements, touchedFields);
+		showContactStatusMessage(formElements, "contact.form.status.success", "success");
+	} catch (error) {
+		showContactStatusMessage(formElements, "contact.form.status.error", "error");
+	} finally {
+		setSubmitButtonPendingState(formElements, false);
+	}
+}
+
+function setAllFieldsTouched(touchedFields) {
+	touchedFields.contactName = true;
+	touchedFields.contactEmail = true;
+	touchedFields.contactMessage = true;
+	touchedFields.contactPrivacy = true;
+}
+
+function focusFirstInvalidContactField(formElements) {
+	const validationTargets = getContactValidationTargets(formElements);
+	const firstInvalidTarget = validationTargets.find((target) => !target.isValid());
+	firstInvalidTarget?.field.focus();
+}
+
+function getContactValidationTargets(formElements) {
+	return [
+		{ field: formElements.contactName, isValid: () => isNameFieldValid(formElements) },
+		{ field: formElements.contactEmail, isValid: () => isEmailFieldValid(formElements) },
+		{ field: formElements.contactMessage, isValid: () => isMessageFieldValid(formElements) },
+		{ field: formElements.contactPrivacy, isValid: () => isPrivacyFieldValid(formElements) },
+	];
+}
+
+function isNameFieldValid(formElements) {
+	return isNameValid(formElements.contactName.value);
+}
+
+function isEmailFieldValid(formElements) {
+	return isEmailValid(formElements.contactEmail.value);
+}
+
+function isMessageFieldValid(formElements) {
+	return isMessageValid(formElements.contactMessage.value);
+}
+
+function isPrivacyFieldValid(formElements) {
+	return isPrivacyValid(formElements.contactPrivacy.checked);
+}
+
+async function sendContactMessage(formElements) {
+	const payload = {
+		name: formElements.contactName.value,
+		email: formElements.contactEmail.value,
+		message: formElements.contactMessage.value,
+	};
+	const response = await sendContactRequest(payload);
+	const result = await response.json().catch(() => ({}));
+	if (!response.ok || !result.success) {
+		throw new Error(result.error || "Senden fehlgeschlagen");
+	}
+	return result;
+}
+
+async function sendContactRequest(payload) {
+	return fetch("./php/sendEmail.php", {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify(payload),
+	});
+}
+
+function resetContactFormState(formElements, touchedFields) {
+	formElements.contactName.value = "";
+	formElements.contactEmail.value = "";
+	formElements.contactMessage.value = "";
+	formElements.contactPrivacy.checked = false;
+	touchedFields.contactName = false;
+	touchedFields.contactEmail = false;
+	touchedFields.contactMessage = false;
+	touchedFields.contactPrivacy = false;
+	initializeFieldErrors(formElements);
+	hideContactStatusMessage(formElements);
+	updateSubmitState(formElements);
+}
+
+function showContactStatusMessage(formElements, translationKey, statusType) {
+	const statusElement = formElements.contactStatusMessage;
+	if (!statusElement) return;
+	hideContactStatusMessage(formElements);
+	statusElement.textContent = getTranslationText(translationKey);
+	statusElement.classList.toggle("is-success", statusType === "success");
+	statusElement.classList.toggle("is-error", statusType === "error");
+	void statusElement.offsetWidth;
+	statusElement.classList.add("is-visible");
+}
+
+function hideContactStatusMessage(formElements) {
+	const statusElement = formElements.contactStatusMessage;
+	if (!statusElement) return;
+	statusElement.textContent = "";
+	statusElement.classList.remove("is-visible", "is-success", "is-error");
+}
+
+function setupContactStatusMessageListener(formElements) {
+	const statusElement = formElements.contactStatusMessage;
+	if (!statusElement) return;
+	statusElement.addEventListener("animationend", () => {
+		hideContactStatusMessage(formElements);
+	});
+}
+
+function getTranslationText(translationKey) {
+	const currentLanguage = document.documentElement.lang || "en";
+	return translations?.[currentLanguage]?.[translationKey] || translations?.en?.[translationKey] || "";
+}
+
+function setSubmitButtonPendingState(formElements, isPending) {
+	const submitButton = formElements.contactSubmitButton;
+	if (isPending) {
+		submitButton.disabled = true;
+		submitButton.setAttribute("aria-disabled", "true");
+		return;
+	}
+	updateSubmitState(formElements);
 }
 
 function initBurgerButtonToggle() {
