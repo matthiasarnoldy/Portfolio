@@ -1,8 +1,183 @@
 function init() {
 	initBurgerButtonToggle();
 	initDialogLinks();
+	initContactFormValidation();
 	const currentLanguage = initLanguageToggle();
 	applyTranslations(currentLanguage);
+}
+
+function initContactFormValidation() {
+	const formElements = getContactFormElements();
+	if (!formElements) return null;
+	const touchedFields = {
+		contactName: false,
+		contactEmail: false,
+		contactMessage: false,
+		contactPrivacy: false,
+	};
+	setupContactFormListeners(formElements, touchedFields);
+	return formElements;
+}
+
+function getContactFormElements() {
+	const formElements = {
+		contactName: document.getElementById("contactName"),
+		contactEmail: document.getElementById("contactEmail"),
+		contactMessage: document.getElementById("contact-message"),
+		contactPrivacy: document.getElementById("contact-privacy"),
+		contactSubmitButton: document.querySelector(".contact__send"),
+		contactNameError: document.getElementById("contactNameError"),
+		contactEmailError: document.getElementById("contactEmailError"),
+		contactMessageError: document.getElementById("contactMessageError"),
+		contactPrivacyError: document.getElementById("contactPrivacyError"),
+	};
+	const hasAllElements = Object.values(formElements).every(Boolean);
+	return hasAllElements ? formElements : null;
+}
+
+function setupContactFormListeners(formElements, touchedFields) {
+	const { contactName, contactEmail, contactMessage, contactPrivacy } = formElements;
+	initializeFieldErrors(formElements);
+	setupNameFieldListeners(contactName, formElements, touchedFields);
+	setupEmailFieldListeners(contactEmail, formElements, touchedFields);
+	setupMessageFieldListeners(contactMessage, formElements, touchedFields);
+	setupPrivacyFieldListeners(contactPrivacy, formElements, touchedFields);
+	setupKeyboardFocusIndicators(formElements);
+	updateSubmitState(formElements);
+}
+
+function setupNameFieldListeners(contactName, formElements, touchedFields) {
+	contactName.addEventListener("input", () => {
+		updateFormState(formElements, touchedFields);
+	});
+	contactName.addEventListener("blur", () => {
+		touchedFields.contactName = true;
+		updateFormState(formElements, touchedFields);
+	});
+}
+
+function setupEmailFieldListeners(contactEmail, formElements, touchedFields) {
+	contactEmail.addEventListener("input", () => {
+		updateFormState(formElements, touchedFields);
+	});
+	contactEmail.addEventListener("blur", () => {
+		touchedFields.contactEmail = true;
+		updateFormState(formElements, touchedFields);
+	});
+}
+
+function setupMessageFieldListeners(contactMessage, formElements, touchedFields) {
+	contactMessage.addEventListener("input", () => {
+		updateFormState(formElements, touchedFields);
+	});
+	contactMessage.addEventListener("blur", () => {
+		touchedFields.contactMessage = true;
+		updateFormState(formElements, touchedFields);
+	});
+}
+
+function setupPrivacyFieldListeners(contactPrivacy, formElements, touchedFields) {
+	contactPrivacy.addEventListener("change", () => {
+		touchedFields.contactPrivacy = true;
+		updateFormState(formElements, touchedFields);
+	});
+}
+
+function setupKeyboardFocusIndicators(formElements) {
+	const contactInputs = getContactInputs(formElements);
+	contactInputs.forEach(input => {
+		setupInputFocusIndicators(input);
+	});
+}
+
+function setupInputFocusIndicators(input) {
+	let isMouseActive = false;
+	input.addEventListener("mousedown", () => {
+		isMouseActive = true;
+	});
+	input.addEventListener("focus", () => {
+		if (!isMouseActive) {
+			input.classList.add("is-keyboard-focus");
+		}
+		isMouseActive = false;
+	});
+	input.addEventListener("blur", () => {
+		input.classList.remove("is-keyboard-focus");
+	});
+}
+
+function getContactInputs(formElements) {
+	return [formElements.contactName, formElements.contactEmail, formElements.contactMessage, formElements.contactPrivacy];
+}
+
+function isNameValid(nameValue) {
+	if (typeof nameValue !== "string") return false;
+	const trimmedName = nameValue.trim();
+	if (trimmedName.length < 2) return false;
+	const namePattern = /^[a-zA-ZäöüßÄÖÜ\s]+$/;
+	return namePattern.test(trimmedName);
+}
+
+function isEmailValid(emailValue) {
+	if (typeof emailValue !== "string") return false;
+	const normalizedEmail = emailValue.trim();
+	const emailPattern = /^(?!.*\.\.)(?!\.)(?!.*\.$)[A-Za-z0-9](?:[A-Za-z0-9._%+-]*[A-Za-z0-9])?@[A-Za-z0-9-]+(?:\.[A-Za-z]{2,24}|\.(?:co|com|org|net|gov|edu|ac)\.[A-Za-z]{2})$/i;
+	return emailPattern.test(normalizedEmail);
+}
+
+function isMessageValid(messageValue) {
+	if (typeof messageValue !== "string") return false;
+	if (messageValue.length < 10) return false;
+	const uniqueCharacters = new Set(messageValue);
+	return uniqueCharacters.size >= 5;
+}
+
+function isPrivacyValid(isChecked) {
+	return isChecked === true;
+}
+
+function initializeFieldErrors(formElements) {
+	setFieldErrorState(formElements.contactName, formElements.contactNameError, true);
+	setFieldErrorState(formElements.contactEmail, formElements.contactEmailError, true);
+	setFieldErrorState(formElements.contactMessage, formElements.contactMessageError, true);
+	setFieldErrorState(formElements.contactPrivacy, formElements.contactPrivacyError, true);
+}
+
+function updateFieldErrors(formElements, touchedFields) {
+	const isNameFieldValid = isNameValid(formElements.contactName.value);
+	const isEmailFieldValid = isEmailValid(formElements.contactEmail.value);
+	const isMessageFieldValid = isMessageValid(formElements.contactMessage.value);
+	const isPrivacyFieldValid = isPrivacyValid(formElements.contactPrivacy.checked);
+	updateSingleFieldError(formElements.contactName, formElements.contactNameError, isNameFieldValid, touchedFields.contactName);
+	updateSingleFieldError(formElements.contactEmail, formElements.contactEmailError, isEmailFieldValid, touchedFields.contactEmail);
+	updateSingleFieldError(formElements.contactMessage, formElements.contactMessageError, isMessageFieldValid, touchedFields.contactMessage);
+	updateSingleFieldError(formElements.contactPrivacy, formElements.contactPrivacyError, isPrivacyFieldValid, touchedFields.contactPrivacy);
+}
+
+function updateSingleFieldError(fieldElement, errorElement, isValid, isTouched) {
+	const shouldShowError = isTouched ? isValid : true;
+	setFieldErrorState(fieldElement, errorElement, shouldShowError);
+}
+
+function setFieldErrorState(fieldElement, errorElement, isValid) {
+	fieldElement.setAttribute("aria-invalid", String(!isValid));
+	errorElement.style.opacity = isValid ? "0" : "1";
+}
+
+function updateSubmitState(formElements) {
+	const isFormValid =
+		isNameValid(formElements.contactName.value) &&
+		isEmailValid(formElements.contactEmail.value) &&
+		isMessageValid(formElements.contactMessage.value) &&
+		isPrivacyValid(formElements.contactPrivacy.checked);
+	formElements.contactSubmitButton.disabled = !isFormValid;
+	formElements.contactSubmitButton.setAttribute("aria-disabled", String(!isFormValid));
+	return isFormValid;
+}
+
+function updateFormState(formElements, touchedFields) {
+	updateSubmitState(formElements);
+	updateFieldErrors(formElements, touchedFields);
 }
 
 function initBurgerButtonToggle() {

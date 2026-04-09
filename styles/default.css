@@ -16,9 +16,18 @@
     --color-done: #70E71A;
 }
 
-.theme-dark {
-    --color-bg: #000;
-    --color-text: #FFFCF3;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-box-shadow: 0 0 0 30px var(--color-text) inset !important;
+	-webkit-text-fill-color: var(--color-bg) !important;
+	font-family: "Overpass", Arial, Helvetica, sans-serif !important;
+}
+
+input.is-keyboard-focus {
+	outline: 3px solid var(--color-highlight);
+    outline-offset: 4px;
 }
 
 .default__text {
@@ -140,17 +149,6 @@ h5 {
 
 a {
     text-decoration: none;
-}
-
-a:focus-visible,
-button:focus-visible,
-.button:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible,
-[tabindex]:not([tabindex="-1"]):focus-visible {
-    outline: 3px solid var(--color-highlight);
-    outline-offset: 4px;
 }
 
 .error__message {
