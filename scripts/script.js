@@ -111,22 +111,39 @@ function setupPrivacyFieldListeners(contactPrivacy, formElements, touchedFields)
 }
 
 function setupKeyboardFocusIndicators(formElements) {
+	let isKeyboardNavigation = false;
+	setupKeyboardNavigationListeners(
+		() => isKeyboardNavigation = true,
+		() => isKeyboardNavigation = false,
+	);
 	const contactInputs = getContactInputs(formElements);
 	contactInputs.forEach(input => {
-		setupInputFocusIndicators(input);
+		setupInputFocusIndicators(input, () => isKeyboardNavigation);
 	});
 }
 
-function setupInputFocusIndicators(input) {
-	let isMouseActive = false;
-	input.addEventListener("mousedown", () => {
-		isMouseActive = true;
+function setupKeyboardNavigationListeners(onKeyboardNavigation, onPointerNavigation) {
+	document.addEventListener("keydown", (event) => {
+		if (event.key === "Tab") {
+			onKeyboardNavigation();
+		}
 	});
+	document.addEventListener("mousedown", () => {
+		onPointerNavigation();
+	});
+	document.addEventListener("touchstart", () => {
+		onPointerNavigation();
+	}, { passive: true });
+	document.addEventListener("pointerdown", () => {
+		onPointerNavigation();
+	});
+}
+
+function setupInputFocusIndicators(input, isKeyboardNavigation) {
 	input.addEventListener("focus", () => {
-		if (!isMouseActive) {
+		if (isKeyboardNavigation()) {
 			input.classList.add("is-keyboard-focus");
 		}
-		isMouseActive = false;
 	});
 	input.addEventListener("blur", () => {
 		input.classList.remove("is-keyboard-focus");
@@ -234,6 +251,7 @@ async function processContactSubmitRequest(formElements, touchedFields) {
 		resetContactFormState(formElements, touchedFields);
 		showContactStatusMessage(formElements, "contact.form.status.success", "success");
 	} catch (error) {
+		resetContactFormState(formElements, touchedFields);
 		showContactStatusMessage(formElements, "contact.form.status.error", "error");
 	} finally {
 		setSubmitButtonPendingState(formElements, false);

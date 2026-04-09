@@ -251,7 +251,11 @@
         opacity: 0;
         transform: translate(-50%, 50vh);
     }
-    50% {
+    20% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+    80% {
         opacity: 1;
         transform: translate(-50%, 0);
     }
@@ -264,12 +268,12 @@
 @keyframes dialogQuicklinkLineGrowLeft {
     0% {
         opacity: 1;
-        width: calc((100% - 78px) / 2);
-        right: 39px;
+        width: calc(100% / 2);
+        right: 0;
     }
     100% {
         opacity: 1;
-        width: calc(100% - 78px);
-        right: 39px;
+        width: calc(100%);
+        right: 0;
     }
 }
