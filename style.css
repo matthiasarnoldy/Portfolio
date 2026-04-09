@@ -906,6 +906,57 @@ main {
     transition: color 100ms ease-in-out;
 }
 
+.contact__input.is-validated[aria-invalid="true"] {
+    background-image: url("./assets/icons/error.svg");
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: calc(100% - 16px) center;
+    padding-right: 56px;
+}
+
+.contact__input.is-validated[aria-invalid="false"] {
+    background-image: url("./assets/icons/done.svg");
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: calc(100% - 16px) center;
+    padding-right: 56px;
+}
+
+.contact__input--textarea.is-validated[aria-invalid="true"],
+.contact__input--textarea.is-validated[aria-invalid="false"] {
+    background-position: calc(100% - 16px) 16px;
+}
+
+.contact__field::after {
+    content: "";
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+}
+
+.contact__field:has(.contact__input.is-validated[aria-invalid="true"])::after {
+    opacity: 1;
+    background-image: url("./assets/icons/error.svg");
+}
+
+.contact__field:has(.contact__input.is-validated[aria-invalid="false"])::after {
+    opacity: 1;
+    background-image: url("./assets/icons/done.svg");
+}
+
+.contact__field:has(.contact__input--textarea.is-validated[aria-invalid="true"])::after,
+.contact__field:has(.contact__input--textarea.is-validated[aria-invalid="false"])::after {
+    top: 16px;
+    transform: none;
+}
+
 .contact__field:hover {
     outline: 4px solid var(--color-bg);
     box-shadow: none;

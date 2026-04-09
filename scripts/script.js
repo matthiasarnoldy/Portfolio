@@ -51,6 +51,9 @@ function setupContactFormListeners(formElements, touchedFields) {
 
 function setupNameFieldListeners(contactName, formElements, touchedFields) {
 	contactName.addEventListener("input", () => {
+		if (contactName.value.length > 0) {
+			touchedFields.contactName = true;
+		}
 		updateFormState(formElements, touchedFields);
 	});
 	contactName.addEventListener("blur", () => {
@@ -61,6 +64,9 @@ function setupNameFieldListeners(contactName, formElements, touchedFields) {
 
 function setupEmailFieldListeners(contactEmail, formElements, touchedFields) {
 	contactEmail.addEventListener("input", () => {
+		if (contactEmail.value.length > 0) {
+			touchedFields.contactEmail = true;
+		}
 		updateFormState(formElements, touchedFields);
 	});
 	contactEmail.addEventListener("blur", () => {
@@ -71,6 +77,9 @@ function setupEmailFieldListeners(contactEmail, formElements, touchedFields) {
 
 function setupMessageFieldListeners(contactMessage, formElements, touchedFields) {
 	contactMessage.addEventListener("input", () => {
+		if (contactMessage.value.length > 0) {
+			touchedFields.contactMessage = true;
+		}
 		updateFormState(formElements, touchedFields);
 	});
 	contactMessage.addEventListener("blur", () => {
@@ -140,10 +149,10 @@ function isPrivacyValid(isChecked) {
 }
 
 function initializeFieldErrors(formElements) {
-	setFieldErrorState(formElements.contactName, formElements.contactNameError, true);
-	setFieldErrorState(formElements.contactEmail, formElements.contactEmailError, true);
-	setFieldErrorState(formElements.contactMessage, formElements.contactMessageError, true);
-	setFieldErrorState(formElements.contactPrivacy, formElements.contactPrivacyError, true);
+	setFieldErrorState(formElements.contactName, formElements.contactNameError, true, false);
+	setFieldErrorState(formElements.contactEmail, formElements.contactEmailError, true, false);
+	setFieldErrorState(formElements.contactMessage, formElements.contactMessageError, true, false);
+	setFieldErrorState(formElements.contactPrivacy, formElements.contactPrivacyError, true, false);
 }
 
 function updateFieldErrors(formElements, touchedFields) {
@@ -159,11 +168,12 @@ function updateFieldErrors(formElements, touchedFields) {
 
 function updateSingleFieldError(fieldElement, errorElement, isValid, isTouched) {
 	const shouldShowError = isTouched ? isValid : true;
-	setFieldErrorState(fieldElement, errorElement, shouldShowError);
+	setFieldErrorState(fieldElement, errorElement, shouldShowError, isTouched);
 }
 
-function setFieldErrorState(fieldElement, errorElement, isValid) {
+function setFieldErrorState(fieldElement, errorElement, isValid, isTouched) {
 	fieldElement.setAttribute("aria-invalid", String(!isValid));
+	fieldElement.classList.toggle("is-validated", isTouched);
 	errorElement.style.opacity = isValid ? "0" : "1";
 }
 
