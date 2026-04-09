@@ -25,17 +25,33 @@
     <header class="navbar background__color--default">
         <div class="header__inner">
             <img class="logo" src="../assets/icons/initialDark.svg" alt="Initial Logo" data-i18n-alt="header.logoAlt">
-            <button class="burgermenu__button" type="button" aria-label="Open menu" data-i18n-aria-label="header.openMenu">
-                <svg class="burgermenu" width="44" height="38" viewBox="0 0 44 38" fill="none"
-                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path class="burgermenu__line burgermenu__line--top" d="M2 2H42" stroke="black" stroke-width="4"
-                        stroke-linecap="square" vector-effect="non-scaling-stroke" />
-                    <path class="burgermenu__line burgermenu__line--middle" d="M2 19H42" stroke="black"
-                        stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke" />
-                    <path class="burgermenu__line burgermenu__line--bottom" d="M2 36H42" stroke="black"
-                        stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke" />
-                </svg>
-            </button>
+            <nav>
+                <fieldset class="language__toogle language__toogle--header" aria-label="Language" data-i18n-aria-label="header.languageLabel">
+                    <label class="language__box">
+                        <input class="language__radio sr-only" type="radio" name="language-header" value="en" checked>
+                        <span class="language">EN</span>
+                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L19 0.999998" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </label>
+                    <label class="language__box">
+                        <input class="language__radio sr-only" type="radio" name="language-header" value="de">
+                        <span class="language">DE</span>
+                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L19 0.999998" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </label>
+                </fieldset>
+                <button class="burgermenu__button" type="button" aria-label="Open menu" data-i18n-aria-label="header.openMenu">
+                    <svg class="burgermenu" width="44" height="38" viewBox="0 0 44 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path class="burgermenu__line burgermenu__line--top" d="M2 2H42" stroke="black" stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke"/>
+                        <path class="burgermenu__line burgermenu__line--middle" d="M2 19H42" stroke="black" stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke"/>
+                        <path class="burgermenu__line burgermenu__line--bottom" d="M2 36H42" stroke="black" stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke"/>
+                    </svg>
+                </button>
+            </nav>
         </div>
     </header>
     <a class="legal__back-link" href="../index.html" aria-label="Back to homepage" data-i18n-aria-label="legal.backToHomepage">

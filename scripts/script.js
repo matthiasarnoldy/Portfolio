@@ -41,6 +41,7 @@ function initDialogLinks() {
 function openDialog() {
 	const dialog = document.querySelector(".burger-dialog");
 	if (!(dialog instanceof HTMLDialogElement)) return;
+	dialog.classList.remove("is-closing");
 	if (!dialog.open) {
 		dialog.showModal();
 		document.body.style.overflow = "hidden";
@@ -50,10 +51,14 @@ function openDialog() {
 function closeDialog() {
 	const dialog = document.querySelector(".burger-dialog");
 	if (!(dialog instanceof HTMLDialogElement)) return;
-	if (dialog.open) {
+	if (!dialog.open || dialog.classList.contains("is-closing")) return;
+	dialog.classList.add("is-closing");
+	window.setTimeout(() => {
+		if (!dialog.classList.contains("is-closing")) return;
 		dialog.close();
+		dialog.classList.remove("is-closing");
 		document.body.style.overflow = "";
-	}
+	}, 560);
 }
 
 function initLanguageToggle() {

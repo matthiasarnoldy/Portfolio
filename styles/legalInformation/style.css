@@ -1,5 +1,10 @@
 h1 {
     font-size: clamp(32px, 4.11vw + 18.86px, 78px);
+    line-height: 1.1;
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
 }
 
 h2 {

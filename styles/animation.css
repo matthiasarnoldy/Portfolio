@@ -201,3 +201,47 @@
         transform: scaleX(1) rotate(0deg);
     }
 }
+
+@keyframes dialogContentIn {
+    from {
+        opacity: 0;
+        transform: translateY(100vh);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes dialogFooterIn {
+    from {
+        transform: translateY(100vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes dialogContentOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes dialogFooterOut {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(100vh);
+    }
+}

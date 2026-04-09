@@ -1199,6 +1199,7 @@ footer {
     max-height: none;
     margin: 0;
     padding: 0;
+    overflow: hidden;
     background-color: var(--color-bg);
     align-items: stretch;
     flex-direction: column;
@@ -1213,6 +1214,22 @@ footer {
     display: flex;
 }
 
+.burger-dialog[open] .burger-dialog__content {
+    animation: dialogContentIn 500ms ease-out both;
+}
+
+.burger-dialog[open] .contact {
+    animation: dialogFooterIn 500ms ease-out both;
+}
+
+.burger-dialog.is-closing .burger-dialog__content {
+    animation: dialogContentOut 500ms ease-in both;
+}
+
+.burger-dialog.is-closing .contact {
+    animation: dialogFooterOut 500ms ease-in both;
+}
+
 .burger-dialog__content {
     width: 100%;
     padding-top: 98px;
@@ -1222,6 +1239,7 @@ footer {
     flex-direction: column;
     flex: 1;
     gap: 35px;
+    z-index: 999;
 }
 
 .dialog__quicklink {
