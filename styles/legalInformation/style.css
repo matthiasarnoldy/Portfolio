@@ -9,24 +9,52 @@ h1 {
 
 h2 {
     font-size: 32px;
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
 }
 
 h3 {
     font-family: "Overpass", Arial, Helvetica, sans-serif;
     font-size: 28px;
     font-weight: 800;
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
 }
 
 .text__wrapper--headline {
     font-family: "Overpass", Arial, Helvetica, sans-serif;
     font-size: 24px;
     font-weight: 800;
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
 }
 
 .text__wrapper--subheadline {
     font-family: "Overpass", Arial, Helvetica, sans-serif;
     font-size: 22px;
     font-weight: 700;
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
+}
+
+p {
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 ul {
@@ -36,16 +64,29 @@ ul {
 
 a {
     color: var(--color-highlight);
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+li {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .legal__link {
     display: inline-block;
+    max-width: 100%;
     position: relative;
     vertical-align: middle;
     color: var(--color-highlight);
     text-decoration: none;
     cursor: pointer;
     transition: all 100ms ease-in-out;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    white-space: normal;
 }
 
 .legal__link::before {

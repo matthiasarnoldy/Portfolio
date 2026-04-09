@@ -237,12 +237,12 @@
                     The controller responsible for data processing on this
                     website is:
                 </p>
-                <p data-i18n="privacy.section3.controller.text2">
+                <p data-i18n="privacy.section3.controller.text2" data-i18n-mode="html">
                     Matthias Arnoldy<br />
                     Hauptstraße 57<br />
                     54455 Serrig, Germany
                 </p>
-                <p data-i18n="privacy.section3.controller.text3">
+                <p data-i18n="privacy.section3.controller.text3" data-i18n-mode="html">
                     Phone: 01512 9827139<br />
                     Email: m.arnoldy@outlook.de
                 </p>
@@ -577,7 +577,7 @@
                             <img class="footer__initial" src="../assets/icons/initialLight.svg" alt="Initial Logo" data-i18n-alt="footer.logoAlt">
                             <p class="footer__copyright--text default__text default__text--22 default__text--400">&copy;
                                 Matthias Arnoldy 2026</p>
-                            <a class="footer__mail default__text default__text--22 default__text--300 legal__link"
+                            <a class="footer__mail default__text default__text--22 default__text--300"
                                 href="../index.html#contact">m.arnoldy@outlook.de</a>
                         </div>
                         <div class="footer__quicklinks">
@@ -604,6 +604,85 @@
             </div>
         </div>
     </section>
+    <dialog class="burger-dialog" aria-label="Menu">
+        <div class="navbar background__color--default">
+            <div class="header__inner">
+                <img class="logo" src="../assets/icons/initialDark.svg" alt="Initial Logo" data-i18n-alt="header.logoAlt">
+                <nav>
+                <fieldset class="language__toogle language__toogle--dialog" aria-label="Language" data-i18n-aria-label="header.languageLabel">
+                    <label class="language__box">
+                        <input class="language__radio sr-only" type="radio" name="language-dialog" value="en" checked>
+                        <span class="language">EN</span>
+                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L19 0.999998" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </label>
+                    <label class="language__box">
+                        <input class="language__radio sr-only" type="radio" name="language-dialog" value="de">
+                        <span class="language">DE</span>
+                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L19 0.999998" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </label>
+                </fieldset>
+                <button class="burgermenu__button is-open" type="button" aria-label="Open menu" data-i18n-aria-label="header.openMenu">
+                    <svg class="burgermenu" width="44" height="38" viewBox="0 0 44 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path class="burgermenu__line burgermenu__line--top" d="M2 2H42" stroke="black" stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke"/>
+                        <path class="burgermenu__line burgermenu__line--middle" d="M2 19H42" stroke="black" stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke"/>
+                        <path class="burgermenu__line burgermenu__line--bottom" d="M2 36H42" stroke="black" stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke"/>
+                    </svg>
+                </button>
+            </nav>
+            </div>
+        </div>
+        <nav class="burger-dialog__content" aria-label="Page navigation">
+            <a href="../index.html#about" class="dialog__quicklink">
+                <span class="dialog__quicklink--text" data-i18n="dialog.nav.about">About</span>
+                <img class="dialog__quicklink--icon" src="../assets/icons/angle.svg" alt="Angle">
+            </a>
+            <a href="../index.html#skills" class="dialog__quicklink">
+                <span class="dialog__quicklink--text" data-i18n="dialog.nav.skills">My Skills</span>
+                <img class="dialog__quicklink--icon" src="../assets/icons/angle.svg" alt="Angle">
+            </a>
+            <a href="../index.html#portfolio" class="dialog__quicklink">
+                <span class="dialog__quicklink--text" data-i18n="portfolio.headline">Portfolio</span>
+                <img class="dialog__quicklink--icon" src="../assets/icons/angle.svg" alt="Angle">
+            </a>
+        </nav>
+        <section class="contact">
+            <div class="dialog__panel-shell">
+                <div class="dialog__panel">
+                    <div class="contact__content dialog__content">
+                        <footer class="footer__dialog">
+                            <div class="footer__copyright footer__copyright--dialog">
+                                <h2 data-i18n="contact.headline">Say Hi!</h2>
+                                <p class="footer__copyright--text default__text default__text--22 default__text--400">&copy;
+                                    Matthias Arnoldy 2026</p>
+                                <a class="footer__mail default__text default__text--22 default__text--300"
+                                    href="#contact">m.arnoldy@outlook.de</a>
+                            </div>
+                            <div class="footer__quicklinks footer__quicklinks--dialog">
+                                <a class="footer__icon-wrap" href="https://github.com/matthiasarnoldy" target="_blank"
+                                    rel="noopener noreferrer" aria-label="Open GitHub (opens in a new tab)" data-i18n-aria-label="footer.links.github">
+                                    <img class="footer__icon" src="../assets/icons/github.svg" alt="GitHub" data-i18n-alt="footer.links.githubAlt">
+                                </a>
+                                <a class="footer__icon-wrap" href="mailto:m.arnoldy@outlook.de"
+                                    aria-label="Write an E-Mail" data-i18n-aria-label="footer.links.mail">
+                                    <img class="footer__icon" src="../assets/icons/email.svg" alt="Email" data-i18n-alt="footer.links.mailAlt">
+                                </a>
+                                <a class="footer__icon-wrap" href="https://www.linkedin.com/" target="_blank"
+                                    rel="noopener noreferrer" aria-label="Open LinkedIn (opens in a new tab)" data-i18n-aria-label="footer.links.linkedin">
+                                    <img class="footer__icon" src="../assets/icons/linkedIn.svg" alt="LinkedIn" data-i18n-alt="footer.links.linkedinAlt">
+                                </a>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </dialog>
 </body>
 
 </html>
