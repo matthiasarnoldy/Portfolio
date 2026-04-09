@@ -175,3 +175,39 @@ a {
 .highlight {
     color: var(--color-highlight);
 }
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero__arrow {
+        animation: none;
+    }
+
+    .arrow__right--head,
+    .arrow__right--shaft,
+    .arrow__left--head,
+    .arrow__left--shaft {
+        animation: none;
+        stroke-dasharray: unset;
+    }
+
+    .skills__box:hover img {
+        animation: none;
+    }
+
+    .burgermenu__line--top,
+    .burgermenu__line--middle,
+    .burgermenu__line--bottom,
+    .burger-dialog .contact__content,
+    .burger-dialog .footer__dialog,
+    .contact__status-message.is-visible {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        transition-delay: 0s !important;
+    }
+}

@@ -30,7 +30,7 @@
                     <label class="language__box">
                         <input class="language__radio sr-only" type="radio" name="language-header" value="en" checked>
                         <span class="language">EN</span>
-                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none"
+                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L19 0.999998" stroke-width="2" stroke-linecap="round" />
                         </svg>
@@ -38,13 +38,13 @@
                     <label class="language__box">
                         <input class="language__radio sr-only" type="radio" name="language-header" value="de">
                         <span class="language">DE</span>
-                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none"
+                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L19 0.999998" stroke-width="2" stroke-linecap="round" />
                         </svg>
                     </label>
                 </fieldset>
-                <button class="burgermenu__button" type="button" aria-label="Open menu" data-i18n-aria-label="header.openMenu">
+                <button class="burgermenu__button" type="button" aria-label="Open menu" aria-expanded="false" data-i18n-aria-label="header.openMenu">
                     <svg class="burgermenu" width="44" height="38" viewBox="0 0 44 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path class="burgermenu__line burgermenu__line--top" d="M2 2H42" stroke="black" stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke"/>
                         <path class="burgermenu__line burgermenu__line--middle" d="M2 19H42" stroke="black" stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke"/>
@@ -604,7 +604,7 @@
             </div>
         </div>
     </section>
-    <dialog class="burger-dialog" aria-label="Menu">
+    <dialog class="burger-dialog" aria-label="Menu" aria-modal="true">
         <div class="navbar background__color--default">
             <div class="header__inner">
                 <img class="logo" src="../assets/icons/initialDark.svg" alt="Initial Logo" data-i18n-alt="header.logoAlt">
@@ -613,7 +613,7 @@
                     <label class="language__box">
                         <input class="language__radio sr-only" type="radio" name="language-dialog" value="en" checked>
                         <span class="language">EN</span>
-                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none"
+                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L19 0.999998" stroke-width="2" stroke-linecap="round" />
                         </svg>
@@ -621,13 +621,13 @@
                     <label class="language__box">
                         <input class="language__radio sr-only" type="radio" name="language-dialog" value="de">
                         <span class="language">DE</span>
-                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none"
+                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L19 0.999998" stroke-width="2" stroke-linecap="round" />
                         </svg>
                     </label>
                 </fieldset>
-                <button class="burgermenu__button is-open" type="button" aria-label="Open menu" data-i18n-aria-label="header.openMenu">
+                <button class="burgermenu__button is-open" type="button" aria-label="Open menu" aria-expanded="false" data-i18n-aria-label="header.openMenu">
                     <svg class="burgermenu" width="44" height="38" viewBox="0 0 44 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path class="burgermenu__line burgermenu__line--top" d="M2 2H42" stroke="black" stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke"/>
                         <path class="burgermenu__line burgermenu__line--middle" d="M2 19H42" stroke="black" stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke"/>
@@ -640,15 +640,15 @@
         <nav class="burger-dialog__content" aria-label="Page navigation">
             <a href="../index.html#about" class="dialog__quicklink">
                 <span class="dialog__quicklink--text" data-i18n="dialog.nav.about">About</span>
-                <img class="dialog__quicklink--icon" src="../assets/icons/angle.svg" alt="Angle">
+                <img class="dialog__quicklink--icon" src="../assets/icons/angle.svg" alt="" aria-hidden="true">
             </a>
             <a href="../index.html#skills" class="dialog__quicklink">
                 <span class="dialog__quicklink--text" data-i18n="dialog.nav.skills">My Skills</span>
-                <img class="dialog__quicklink--icon" src="../assets/icons/angle.svg" alt="Angle">
+                <img class="dialog__quicklink--icon" src="../assets/icons/angle.svg" alt="" aria-hidden="true">
             </a>
             <a href="../index.html#portfolio" class="dialog__quicklink">
                 <span class="dialog__quicklink--text" data-i18n="portfolio.headline">Portfolio</span>
-                <img class="dialog__quicklink--icon" src="../assets/icons/angle.svg" alt="Angle">
+                <img class="dialog__quicklink--icon" src="../assets/icons/angle.svg" alt="" aria-hidden="true">
             </a>
         </nav>
         <section class="contact">

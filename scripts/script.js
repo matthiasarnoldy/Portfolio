@@ -51,9 +51,6 @@ function setupContactFormListeners(formElements, touchedFields) {
 
 function setupNameFieldListeners(contactName, formElements, touchedFields) {
 	contactName.addEventListener("input", () => {
-		if (contactName.value.length > 0) {
-			touchedFields.contactName = true;
-		}
 		updateFormState(formElements, touchedFields);
 	});
 	contactName.addEventListener("blur", () => {
@@ -64,9 +61,6 @@ function setupNameFieldListeners(contactName, formElements, touchedFields) {
 
 function setupEmailFieldListeners(contactEmail, formElements, touchedFields) {
 	contactEmail.addEventListener("input", () => {
-		if (contactEmail.value.length > 0) {
-			touchedFields.contactEmail = true;
-		}
 		updateFormState(formElements, touchedFields);
 	});
 	contactEmail.addEventListener("blur", () => {
@@ -77,9 +71,6 @@ function setupEmailFieldListeners(contactEmail, formElements, touchedFields) {
 
 function setupMessageFieldListeners(contactMessage, formElements, touchedFields) {
 	contactMessage.addEventListener("input", () => {
-		if (contactMessage.value.length > 0) {
-			touchedFields.contactMessage = true;
-		}
 		updateFormState(formElements, touchedFields);
 	});
 	contactMessage.addEventListener("blur", () => {
@@ -354,8 +345,11 @@ function initBurgerButtonToggle() {
 
 function handleDialog(burgerButtons) {
 	const shouldOpen = !burgerButtons[0].classList.contains("is-open");
+	const translationKey = shouldOpen ? "header.closeMenu" : "header.openMenu";
 	burgerButtons.forEach((button) => {
 		button.classList.toggle("is-open", shouldOpen);
+		button.setAttribute("aria-expanded", String(shouldOpen));
+		button.setAttribute("aria-label", getTranslationText(translationKey));
 	});
 	if (shouldOpen) {
 		openDialog();

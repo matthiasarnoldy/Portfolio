@@ -28,7 +28,7 @@
                     <label class="language__box">
                         <input class="language__radio sr-only" type="radio" name="language-header" value="en" checked>
                         <span class="language">EN</span>
-                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none"
+                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L19 0.999998" stroke-width="2" stroke-linecap="round" />
                         </svg>
@@ -36,13 +36,13 @@
                     <label class="language__box">
                         <input class="language__radio sr-only" type="radio" name="language-header" value="de">
                         <span class="language">DE</span>
-                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none"
+                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L19 0.999998" stroke-width="2" stroke-linecap="round" />
                         </svg>
                     </label>
                 </fieldset>
-                <button class="burgermenu__button" type="button" aria-label="Open menu" data-i18n-aria-label="header.openMenu">
+                <button class="burgermenu__button" type="button" aria-label="Open menu" aria-expanded="false" data-i18n-aria-label="header.openMenu">
                     <svg class="burgermenu" width="44" height="38" viewBox="0 0 44 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path class="burgermenu__line burgermenu__line--top" d="M2 2H42" stroke="black" stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke"/>
                         <path class="burgermenu__line burgermenu__line--middle" d="M2 19H42" stroke="black" stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke"/>
@@ -357,7 +357,7 @@
                                     <input class="contact__input default__text default__text--16 default__text--400" id="contactName" type="text" placeholder="Your name" data-i18n-placeholder="contact.form.name.placeholder" aria-describedby="contactNameError" aria-invalid="false">
                                     <span class="contact__floating default__text default__text--16 default__text--400" data-i18n="contact.form.name.floating">Your name</span>
                                 </div>
-                                <p id="contactNameError" class="error__message error__message--input default__text default__text--16 default__text--400" role="alert" aria-live="polite" data-i18n="contact.form.name.error">
+                                <p id="contactNameError" class="error__message error__message--input default__text default__text--16 default__text--400" role="alert" data-i18n="contact.form.name.error">
                                     Your name is required 
                                 </p>
                             </div>
@@ -367,7 +367,7 @@
                                     <input class="contact__input default__text default__text--16 default__text--400" id="contactEmail" type="email" placeholder="Your email" data-i18n-placeholder="contact.form.email.placeholder" aria-describedby="contactEmailError" aria-invalid="false">
                                     <span class="contact__floating default__text default__text--16 default__text--400" data-i18n="contact.form.email.floating">Your email</span>
                                 </div>
-                                <p id="contactEmailError" class="error__message error__message--input default__text default__text--16 default__text--400" role="alert" aria-live="polite" data-i18n="contact.form.email.error">
+                                <p id="contactEmailError" class="error__message error__message--input default__text default__text--16 default__text--400" role="alert" data-i18n="contact.form.email.error">
                                     Your email is required 
                                 </p>
                             </div>
@@ -378,7 +378,7 @@
                                         <textarea class="contact__input contact__input--textarea default__text default__text--18 default__text--300" id="contact-message" placeholder="Your message" data-i18n-placeholder="contact.form.message.placeholder" aria-describedby="contactMessageError" aria-invalid="false"></textarea>
                                         <span class="contact__floating default__text default__text--18 default__text--300" data-i18n="contact.form.message.floating">Your message</span>
                                     </div>
-                                    <p id="contactMessageError" class="error__message error__message--input default__text default__text--16 default__text--400" role="alert" aria-live="polite" data-i18n="contact.form.message.error">
+                                    <p id="contactMessageError" class="error__message error__message--input default__text default__text--16 default__text--400" role="alert" data-i18n="contact.form.message.error">
                                         Your message is empty
                                     </p>
                                 </div>
@@ -392,7 +392,7 @@
                                                 <span data-i18n="contact.form.privacy.suffix">and agree to the processing of my data as outlined.</span>
                                             </label>
                                         </div>
-                                        <p id="contactPrivacyError" class="error__message default__text default__text--16 default__text--400" role="alert" aria-live="polite" data-i18n="contact.form.privacy.error">
+                                        <p id="contactPrivacyError" class="error__message default__text default__text--16 default__text--400" role="alert" data-i18n="contact.form.privacy.error">
                                             Please accept the privacy policy.
                                         </p>
                                     </div>
@@ -436,16 +436,16 @@
             </div>
         </div>
     </section>
-    <dialog class="burger-dialog" aria-label="Menu">
+    <dialog class="burger-dialog" aria-label="Menu" aria-modal="true">
         <div class="navbar background__color--default">
             <div class="header__inner">
-                <img class="logo" src="../assets/icons/initialDark.svg" alt="Initial Logo" data-i18n-alt="header.logoAlt">
+                <img class="logo" src="./assets/icons/initialDark.svg" alt="Initial Logo" data-i18n-alt="header.logoAlt">
                 <nav>
                 <fieldset class="language__toogle language__toogle--dialog" aria-label="Language" data-i18n-aria-label="header.languageLabel">
                     <label class="language__box">
                         <input class="language__radio sr-only" type="radio" name="language-dialog" value="en" checked>
                         <span class="language">EN</span>
-                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none"
+                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L19 0.999998" stroke-width="2" stroke-linecap="round" />
                         </svg>
@@ -453,13 +453,13 @@
                     <label class="language__box">
                         <input class="language__radio sr-only" type="radio" name="language-dialog" value="de">
                         <span class="language">DE</span>
-                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none"
+                        <svg class="language__line" width="20" height="2" viewBox="0 0 20 2" fill="none" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L19 0.999998" stroke-width="2" stroke-linecap="round" />
                         </svg>
                     </label>
                 </fieldset>
-                <button class="burgermenu__button is-open" type="button" aria-label="Open menu" data-i18n-aria-label="header.openMenu">
+                <button class="burgermenu__button is-open" type="button" aria-label="Open menu" aria-expanded="false" data-i18n-aria-label="header.openMenu">
                     <svg class="burgermenu" width="44" height="38" viewBox="0 0 44 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path class="burgermenu__line burgermenu__line--top" d="M2 2H42" stroke="black" stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke"/>
                         <path class="burgermenu__line burgermenu__line--middle" d="M2 19H42" stroke="black" stroke-width="4" stroke-linecap="square" vector-effect="non-scaling-stroke"/>
@@ -472,15 +472,15 @@
         <nav class="burger-dialog__content" aria-label="Page navigation">
             <a href="#about" class="dialog__quicklink">
                 <span class="dialog__quicklink--text" data-i18n="dialog.nav.about">About</span>
-                <img class="dialog__quicklink--icon" src="./assets/icons/angle.svg" alt="Angle">
+                <img class="dialog__quicklink--icon" src="./assets/icons/angle.svg" alt="" aria-hidden="true">
             </a>
             <a href="#skills" class="dialog__quicklink">
                 <span class="dialog__quicklink--text" data-i18n="dialog.nav.skills">My Skills</span>
-                <img class="dialog__quicklink--icon" src="./assets/icons/angle.svg" alt="Angle">
+                <img class="dialog__quicklink--icon" src="./assets/icons/angle.svg" alt="" aria-hidden="true">
             </a>
             <a href="#portfolio" class="dialog__quicklink">
                 <span class="dialog__quicklink--text" data-i18n="portfolio.headline">Portfolio</span>
-                <img class="dialog__quicklink--icon" src="./assets/icons/angle.svg" alt="Angle">
+                <img class="dialog__quicklink--icon" src="./assets/icons/angle.svg" alt="" aria-hidden="true">
             </a>
         </nav>
         <section class="contact">
