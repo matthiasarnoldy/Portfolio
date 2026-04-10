@@ -181,11 +181,11 @@ footer {
 }
 
 .burger-dialog.is-closing .burger-dialog__content {
-    animation: dialogContentOut 500ms ease-in both;
+    animation: dialogContentOut 500ms ease-in 100ms both;
 }
 
 .burger-dialog.is-closing .contact {
-    animation: dialogFooterOut 500ms ease-in both;
+    animation: dialogFooterOut 500ms ease-in 100ms both;
 }
 
 .burger-dialog__content {
