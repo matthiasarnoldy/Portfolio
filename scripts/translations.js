@@ -60,7 +60,7 @@ const translations = {
 		"contact.form.message.label": "Your message",
 		"contact.form.message.placeholder": "Your message",
 		"contact.form.message.floating": "Your message",
-		"contact.form.message.error": "Your message is empty",
+		"contact.form.message.error": "Your message is required",
 		"contact.form.privacy.prefix": "I've read the",
 		"contact.form.privacy.link": "privacy policy",
 		"contact.form.privacy.suffix": "and agree to the processing of my data as outlined.",

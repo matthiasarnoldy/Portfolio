@@ -171,9 +171,9 @@ function isEmailValid(emailValue) {
  */
 function isMessageValid(messageValue) {
 	if (typeof messageValue !== "string") return false;
-	if (messageValue.length < 10) return false;
+	if (messageValue.length < 5) return false;
 	const uniqueCharacters = new Set(messageValue);
-	return uniqueCharacters.size >= 5;
+	return uniqueCharacters.size >= 3;
 }
 
 /**

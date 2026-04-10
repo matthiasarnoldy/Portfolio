@@ -45,7 +45,6 @@
 
 .skills__box--text {
     transition: color 100ms ease;
-    transition-delay: 1s;
 }
 
 .skills__box:hover .skills__box--text {

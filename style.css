@@ -22,6 +22,10 @@ body {
     flex-direction: column;
 }
 
+[id]:not(#page-top):not(#main-content) {
+    scroll-margin-top: 100px;
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
